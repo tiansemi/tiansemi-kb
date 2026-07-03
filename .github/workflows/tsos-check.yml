@@ -1,0 +1,32 @@
+name: TSOS Knowledge Base Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check TSOS structure
+        run: |
+          test -d "01 Domains"
+          test -d "06 Templates"
+          test -d "07 Automation"
+          test -d "09 Dashboards"
+
+      - name: Export KB index
+        run: |
+          python "07 Automation/Scripts/export_index.py"
+
+      - name: Upload KB index
+        uses: actions/upload-artifact@v4
+        with:
+          name: kb-index
+          path: "07 Automation/Exports/kb-index.json"
