@@ -1,5 +1,5 @@
 {
-  "count": 70,
+  "count": 69,
   "items": [
     {
       "path": "01 Domains/Cisco/01 Network Fundamentals/ARP.md",
@@ -218,8 +218,8 @@
       "domain": "Networking",
       "vendor": "Cisco",
       "category": "Technical Topic",
-      "status": "reviewed",
-      "publication_status": "reviewed",
+      "status": "draft",
+      "publication_status": "not-started",
       "tags": [
         "cisco",
         "networking",
@@ -886,17 +886,6 @@
     {
       "path": "09 Dashboards/Review Dashboard.md",
       "title": "Review Dashboard",
-      "id": null,
-      "domain": null,
-      "vendor": null,
-      "category": null,
-      "status": null,
-      "publication_status": null,
-      "tags": []
-    },
-    {
-      "path": "Bienvenue.md",
-      "title": "Bienvenue",
       "id": null,
       "domain": null,
       "vendor": null,
