@@ -1,13 +1,17 @@
-id,module,title,path,type,difficulty,status,source_reference
-HUAWEI-HCIA-DATACOM-V2-000,00 Program Overview,Program Overview,01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/00 Program Overview/Home.md,moc,beginner,draft,"HCIA-Datacom V2.0 Training Material.pdf"
-HUAWEI-HCIA-DATACOM-V2-001,01 Data Communication Network Basics,Data Communication Network Basics,01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/Home.md,moc,beginner,draft,"HCIA-Datacom V2.0 Training Material.pdf"
-HUAWEI-HCIA-DATACOM-V2-002,02 Ethernet Technology Basics,Ethernet Technology Basics,01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/02 Ethernet Technology Basics/Home.md,moc,beginner,draft,"HCIA-Datacom V2.0 Training Material.pdf"
-HUAWEI-HCIA-DATACOM-V2-003,03 IP Technology Basics,IP Technology Basics,01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/03 IP Technology Basics/Home.md,moc,beginner,draft,"HCIA-Datacom V2.0 Training Material.pdf"
-HUAWEI-HCIA-DATACOM-V2-004,04 Network Security and Services,Network Security and Services,01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/04 Network Security and Services/Home.md,moc,beginner,draft,"HCIA-Datacom V2.0 Training Material.pdf"
-HUAWEI-HCIA-DATACOM-V2-005,05 Data Center Network Basics,Data Center Network Basics,01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/05 Data Center Network Basics/Home.md,moc,beginner,draft,"HCIA-Datacom V2.0 Training Material.pdf"
-HUAWEI-HCIA-DATACOM-V2-006,06 WLAN Technology Basics,WLAN Technology Basics,01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/06 WLAN Technology Basics/Home.md,moc,beginner,draft,"HCIA-Datacom V2.0 Training Material.pdf"
-HUAWEI-HCIA-DATACOM-V2-007,07 Network O&M and Troubleshooting,Network O&M and Troubleshooting,01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/07 Network O&M and Troubleshooting/Home.md,moc,beginner,draft,"HCIA-Datacom V2.0 Training Material.pdf"
-HUAWEI-HCIA-DATACOM-V2-008,08 Typical Campus Networking Solution,Typical Campus Networking Solution,01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/08 Typical Campus Networking Solution/Home.md,moc,beginner,draft,"HCIA-Datacom V2.0 Training Material.pdf"
-HUAWEI-HCIA-DATACOM-V2-009,09 Labs,HCIA-Datacom Labs,01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/09 Labs/Home.md,lab-index,beginner,draft,"HCIA-Datacom V2.0 Lab Guide.pdf"
-HUAWEI-HCIA-DATACOM-V2-010,10 Exam Preparation,HCIA-Datacom Exam Preparation,01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/10 Exam Preparation/Home.md,exam-prep,beginner,draft,"https://e.huawei.com/en/talent/cert/#/careerCert"
-HUAWEI-HCIA-DATACOM-V2-011,11 Content Outputs,HCIA-Datacom Content Outputs,01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/11 Content Outputs/Home.md,content-engine,beginner,draft,"TSOS content workflow"
+id,title,module,type,difficulty,source,lab_required,path
+HUA-HCIA-DC-001,Data Communication Network,01 Data Communication Network Basics,topic,beginner,Training Material,true,01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/Data Communication Network.md
+HUA-HCIA-DC-002,Data Communication Network Devices,01 Data Communication Network Basics,topic,beginner,Training Material,true,01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/Data Communication Network Devices.md
+HUA-HCIA-DC-003,Data Communication Process,01 Data Communication Network Basics,topic,beginner,Training Material,true,01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/Data Communication Process.md
+HUA-HCIA-DC-004,Network Engineering and Network Engineers,01 Data Communication Network Basics,topic,beginner,Training Material,true,01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/Network Engineering and Network Engineers.md
+HUA-HCIA-DC-005,Network Reference Models,01 Data Communication Network Basics,topic,beginner,Training Material,true,01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/Network Reference Models.md
+HUA-HCIA-DC-006,Data Encapsulation and Decapsulation,01 Data Communication Network Basics,topic,beginner,Training Material,true,01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/Data Encapsulation and Decapsulation.md
+HUA-HCIA-DC-007,Huawei Network Device Operating Systems,01 Data Communication Network Basics,topic,beginner,Training Material,true,01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/Huawei Network Device Operating Systems.md
+HUA-HCIA-LAB-001,Basic Operations on Huawei Network Devices,09 Labs,lab,beginner,Lab Guide,true,01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/09 Labs/01 Basic Operations on Huawei Network Devices.md
+HUA-HCIA-LAB-002,VLAN Configuration,09 Labs,lab,beginner,Lab Guide,true,01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/09 Labs/02 VLAN Configuration.md
+HUA-HCIA-LAB-003,STP Configuration,09 Labs,lab,intermediate,Lab Guide,true,01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/09 Labs/03 STP Configuration.md
+HUA-HCIA-LAB-004,Ethernet Link Aggregation Configuration,09 Labs,lab,intermediate,Lab Guide,true,01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/09 Labs/04 Ethernet Link Aggregation Configuration.md
+HUA-HCIA-LAB-008,OSPF Configuration,09 Labs,lab,intermediate,Lab Guide,true,01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/09 Labs/08 OSPF Configuration.md
+HUA-HCIA-LAB-013,NAT Configuration,09 Labs,lab,intermediate,Lab Guide,true,01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/09 Labs/13 NAT Configuration.md
+HUA-HCIA-LAB-014,WAC + Fit AP Networking Configuration,09 Labs,lab,intermediate,Lab Guide,true,01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/09 Labs/14 WAC + Fit AP Networking Configuration.md
+HUA-HCIA-LAB-016,Network Troubleshooting,09 Labs,lab,intermediate,Lab Guide,true,01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/09 Labs/16 Network Troubleshooting.md
+HUA-HCIA-LAB-017,Campus Network Deployment,09 Labs,lab,advanced,Lab Guide,true,01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/09 Labs/17 Campus Network Deployment.md
