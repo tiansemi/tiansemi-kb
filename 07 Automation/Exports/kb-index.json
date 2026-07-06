@@ -1,5 +1,5 @@
 {
-  "count": 69,
+  "count": 90,
   "items": [
     {
       "path": "01 Domains/Cisco/01 Network Fundamentals/ARP.md",
@@ -620,6 +620,226 @@
       "tags": []
     },
     {
+      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/00 Program Overview/Home.md",
+      "title": "Program Overview",
+      "id": "HUAWEI-HCIA-DATACOM-V2-000",
+      "domain": "Networking",
+      "vendor": "Huawei",
+      "category": "MOC",
+      "status": "draft",
+      "publication_status": "not-started",
+      "tags": [
+        "huawei",
+        "datacom",
+        "hcia",
+        "program"
+      ]
+    },
+    {
+      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/Home.md",
+      "title": "Data Communication Network Basics",
+      "id": "HUAWEI-HCIA-DATACOM-V2-001",
+      "domain": "Networking",
+      "vendor": "Huawei",
+      "category": "MOC",
+      "status": "draft",
+      "publication_status": "not-started",
+      "tags": [
+        "huawei",
+        "datacom",
+        "hcia",
+        "fundamentals"
+      ]
+    },
+    {
+      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/02 Ethernet Technology Basics/Home.md",
+      "title": "Ethernet Technology Basics",
+      "id": "HUAWEI-HCIA-DATACOM-V2-002",
+      "domain": "Networking",
+      "vendor": "Huawei",
+      "category": "MOC",
+      "status": "draft",
+      "publication_status": "not-started",
+      "tags": [
+        "huawei",
+        "datacom",
+        "hcia",
+        "ethernet"
+      ]
+    },
+    {
+      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/03 IP Technology Basics/Home.md",
+      "title": "IP Technology Basics",
+      "id": "HUAWEI-HCIA-DATACOM-V2-003",
+      "domain": "Networking",
+      "vendor": "Huawei",
+      "category": "MOC",
+      "status": "draft",
+      "publication_status": "not-started",
+      "tags": [
+        "huawei",
+        "datacom",
+        "hcia",
+        "ip"
+      ]
+    },
+    {
+      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/04 Network Security and Services/Home.md",
+      "title": "Network Security and Services",
+      "id": "HUAWEI-HCIA-DATACOM-V2-004",
+      "domain": "Networking",
+      "vendor": "Huawei",
+      "category": "MOC",
+      "status": "draft",
+      "publication_status": "not-started",
+      "tags": [
+        "huawei",
+        "datacom",
+        "hcia",
+        "security",
+        "services"
+      ]
+    },
+    {
+      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/05 Data Center Network Basics/Home.md",
+      "title": "Data Center Network Basics",
+      "id": "HUAWEI-HCIA-DATACOM-V2-005",
+      "domain": "Networking",
+      "vendor": "Huawei",
+      "category": "MOC",
+      "status": "draft",
+      "publication_status": "not-started",
+      "tags": [
+        "huawei",
+        "datacom",
+        "hcia",
+        "data-center"
+      ]
+    },
+    {
+      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/06 WLAN Technology Basics/Home.md",
+      "title": "WLAN Technology Basics",
+      "id": "HUAWEI-HCIA-DATACOM-V2-006",
+      "domain": "Networking",
+      "vendor": "Huawei",
+      "category": "MOC",
+      "status": "draft",
+      "publication_status": "not-started",
+      "tags": [
+        "huawei",
+        "datacom",
+        "hcia",
+        "wlan"
+      ]
+    },
+    {
+      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/07 Network O&M and Troubleshooting/Home.md",
+      "title": "Network O&M and Troubleshooting",
+      "id": "HUAWEI-HCIA-DATACOM-V2-007",
+      "domain": "Networking",
+      "vendor": "Huawei",
+      "category": "MOC",
+      "status": "draft",
+      "publication_status": "not-started",
+      "tags": [
+        "huawei",
+        "datacom",
+        "hcia",
+        "troubleshooting"
+      ]
+    },
+    {
+      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/08 Typical Campus Networking Solution/Home.md",
+      "title": "Typical Campus Networking Solution",
+      "id": "HUAWEI-HCIA-DATACOM-V2-008",
+      "domain": "Networking",
+      "vendor": "Huawei",
+      "category": "MOC",
+      "status": "draft",
+      "publication_status": "not-started",
+      "tags": [
+        "huawei",
+        "datacom",
+        "hcia",
+        "campus"
+      ]
+    },
+    {
+      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/09 Labs/Home.md",
+      "title": "HCIA-Datacom Labs",
+      "id": "HUAWEI-HCIA-DATACOM-V2-009",
+      "domain": "Networking",
+      "vendor": "Huawei",
+      "category": "Lab Index",
+      "status": "draft",
+      "publication_status": "not-started",
+      "tags": [
+        "huawei",
+        "datacom",
+        "hcia",
+        "labs",
+        "ensp"
+      ]
+    },
+    {
+      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/10 Exam Preparation/Home.md",
+      "title": "HCIA-Datacom Exam Preparation",
+      "id": "HUAWEI-HCIA-DATACOM-V2-010",
+      "domain": "Networking",
+      "vendor": "Huawei",
+      "category": "Exam Preparation",
+      "status": "draft",
+      "publication_status": "not-started",
+      "tags": [
+        "huawei",
+        "datacom",
+        "hcia",
+        "exam"
+      ]
+    },
+    {
+      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/11 Content Outputs/Home.md",
+      "title": "HCIA-Datacom Content Outputs",
+      "id": "HUAWEI-HCIA-DATACOM-V2-011",
+      "domain": "Networking",
+      "vendor": "Huawei",
+      "category": "Content Engine",
+      "status": "draft",
+      "publication_status": "not-started",
+      "tags": [
+        "huawei",
+        "datacom",
+        "hcia",
+        "content"
+      ]
+    },
+    {
+      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/Home.md",
+      "title": "HCIA-Datacom V2.0 Training",
+      "id": "HUAWEI-HCIA-DC-HOME",
+      "domain": "Datacom",
+      "vendor": "Huawei",
+      "category": "MOC",
+      "status": "active",
+      "publication_status": null,
+      "tags": []
+    },
+    {
+      "path": "01 Domains/Huawei/01 Datacom/Home.md",
+      "title": "Huawei Datacom Knowledge Base",
+      "id": "HUAWEI-DATACOM-HOME",
+      "domain": "Networking",
+      "vendor": "Huawei",
+      "category": "MOC",
+      "status": "active",
+      "publication_status": null,
+      "tags": [
+        "moc",
+        "huawei",
+        "datacom"
+      ]
+    },
+    {
       "path": "01 Domains/Huawei/Home.md",
       "title": "Home",
       "id": null,
@@ -708,6 +928,28 @@
       "tags": []
     },
     {
+      "path": "04 Assets/Diagrams/Huawei/HCIA-Datacom V2.0/README.md",
+      "title": "README",
+      "id": null,
+      "domain": null,
+      "vendor": null,
+      "category": null,
+      "status": null,
+      "publication_status": null,
+      "tags": []
+    },
+    {
+      "path": "04 Assets/eNSP/HCIA-Datacom V2.0/README.md",
+      "title": "README",
+      "id": null,
+      "domain": null,
+      "vendor": null,
+      "category": null,
+      "status": null,
+      "publication_status": null,
+      "tags": []
+    },
+    {
       "path": "04 Assets/Home.md",
       "title": "Home",
       "id": null,
@@ -719,8 +961,41 @@
       "tags": []
     },
     {
+      "path": "04 Assets/Packet Tracer/HCIA-Datacom V2.0/README.md",
+      "title": "README",
+      "id": null,
+      "domain": null,
+      "vendor": null,
+      "category": null,
+      "status": null,
+      "publication_status": null,
+      "tags": []
+    },
+    {
+      "path": "04 Assets/Wireshark/HCIA-Datacom V2.0/README.md",
+      "title": "README",
+      "id": null,
+      "domain": null,
+      "vendor": null,
+      "category": null,
+      "status": null,
+      "publication_status": null,
+      "tags": []
+    },
+    {
       "path": "05 References/Home.md",
       "title": "Home",
+      "id": null,
+      "domain": null,
+      "vendor": null,
+      "category": null,
+      "status": null,
+      "publication_status": null,
+      "tags": []
+    },
+    {
+      "path": "05 References/Huawei/HCIA-Datacom V2.0/README.md",
+      "title": "README",
       "id": null,
       "domain": null,
       "vendor": null,
@@ -807,6 +1082,17 @@
       "tags": []
     },
     {
+      "path": "06 Templates/Labs/Huawei HCIA Lab Template.md",
+      "title": "Huawei HCIA Lab Template",
+      "id": null,
+      "domain": "Datacom",
+      "vendor": "Huawei",
+      "category": "Huawei HCIA-Datacom Lab",
+      "status": "draft",
+      "publication_status": null,
+      "tags": []
+    },
+    {
       "path": "06 Templates/Templater/Atomic Note Template.md",
       "title": "<% tp.file.title %>",
       "id": null,
@@ -815,6 +1101,17 @@
       "category": "Atomic Note",
       "status": "draft",
       "publication_status": null,
+      "tags": []
+    },
+    {
+      "path": "06 Templates/Templater/Huawei HCIA Topic Template.md",
+      "title": "<% tp.file.title %>",
+      "id": null,
+      "domain": "Datacom",
+      "vendor": "Huawei",
+      "category": "Huawei HCIA-Datacom Topic",
+      "status": "draft",
+      "publication_status": "not-started",
       "tags": []
     },
     {
