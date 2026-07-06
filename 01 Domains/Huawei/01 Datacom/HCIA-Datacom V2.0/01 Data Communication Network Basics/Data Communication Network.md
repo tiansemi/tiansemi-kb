@@ -87,6 +87,8 @@ Une communication peut être résumée avec trois éléments :
 | Channel | Support ou chemin utilisé pour transporter les données. | Câble Ethernet, fibre, Wi-Fi, réseau opérateur |
 | Destination | Équipement qui reçoit les données. | Serveur, imprimante, application, autre PC |
 
+La source et la destination dépendent du sens de l'échange. Quand un PC demande une page web, le PC est la source et le serveur est la destination. Quand le serveur répond, le serveur devient la source et le PC devient la destination.
+
 L'idée clé : un réseau ne sert pas seulement à "connecter des câbles". Il sert à transporter une information de manière fiable, contrôlée et exploitable.
 
 ---
@@ -101,9 +103,11 @@ L'idée clé : un réseau ne sert pas seulement à "connecter des câbles". Il s
 | Switch | Connecte les équipements dans un LAN et transfère les trames selon les adresses MAC. | Switch d'accès dans une salle de cours |
 | Router | Relie plusieurs réseaux IP et choisit un chemin vers la destination. | Routeur vers Internet ou vers un autre site |
 | Firewall | Filtre et sécurise les flux selon des règles. | Pare-feu entre le LAN et Internet |
-| AP | Fournit l'accès Wi-Fi aux terminaux sans fil. | Point d'accès dans un bâtiment |
-| WAC | Centralise la gestion de plusieurs AP. | Contrôleur Wi-Fi du campus |
+| AP | Fournit l'accès Wi-Fi aux terminaux sans fil. | Access Point dans un bâtiment |
+| WAC | Centralise la gestion de plusieurs AP. | Wireless Access Controller du campus |
 | Server | Fournit un service aux utilisateurs. | Serveur web, DNS, DHCP, fichiers |
+
+Dans une petite topologie, les fonctions routeur et firewall peuvent être dans deux équipements séparés ou dans un même équipement intégré. Pour raisonner proprement, il faut distinguer le rôle de routage, qui choisit un chemin IP, et le rôle de sécurité, qui autorise ou bloque les flux.
 
 ### LAN, MAN et WAN
 
@@ -112,6 +116,8 @@ L'idée clé : un réseau ne sert pas seulement à "connecter des câbles". Il s
 | LAN | Réseau local dans un bâtiment, une salle ou un campus proche. | Réseau d'une école ou d'un bureau |
 | MAN | Réseau métropolitain couvrant une ville ou une zone urbaine. | Interconnexion de plusieurs sites dans une ville |
 | WAN | Réseau étendu entre villes, pays ou continents. | Connexion entre filiales via opérateur |
+
+Dans la pratique quotidienne, on parle très souvent de LAN et de WAN. Le terme MAN apparaît moins souvent dans les petites entreprises, mais il reste important pour comprendre les réseaux à l'échelle d'une ville ou d'une zone métropolitaine.
 
 ### Enterprise network vs carrier network
 
@@ -140,6 +146,8 @@ Pour l'examen HCIA-Datacom, la différence importante est l'objectif :
 
 Le concept de data communication network est théorique, mais un ingénieur doit rapidement savoir observer un équipement Huawei. Ces commandes servent à découvrir l'état général d'un appareil, pas à configurer le concept lui-même.
 
+Selon le modèle d'équipement, la version VRP et le contexte de lab, certaines sorties peuvent varier. L'objectif HCIA ici est de savoir quoi observer : version système, matériel détecté, état des interfaces et interfaces IP.
+
 ```bash
 display version
 display device
@@ -150,7 +158,7 @@ display ip interface brief
 | Commande | Utilité pratique |
 | -------- | ---------------- |
 | `display version` | Voir la version VRP, le modèle logiciel et des informations système. |
-| `display device` | Vérifier les composants détectés par l'équipement. |
+| `display device` | Vérifier les composants détectés par l'équipement, surtout sur routeurs ou châssis compatibles. |
 | `display interface brief` | Observer rapidement les interfaces et leur état physique/logique. |
 | `display ip interface brief` | Vérifier les interfaces IP, leurs adresses et leur état. |
 
@@ -164,10 +172,10 @@ Savoir représenter un petit réseau d'entreprise et expliquer le rôle de chaqu
 
 ### Topologie
 
-Topologie à dessiner :
+Topologie logique à dessiner :
 
 ```text
-PC utilisateur ---- Switch d'accès ---- Router/Firewall ---- Internet
+PC utilisateur ---- Switch d'accès ---- Router ---- Firewall ---- Internet
                          |
                        Server
                          |
@@ -201,14 +209,14 @@ L'apprenant doit pouvoir expliquer oralement le chemin suivi par une donnée et 
 
 | Symptôme | Cause probable | Vérification | Correction |
 | -------- | -------------- | ------------ | ---------- |
-| Un utilisateur n'accède pas au réseau | Câble débranché, Wi-Fi non associé, port down | Vérifier le terminal, le câble ou l'association Wi-Fi, puis `display interface brief` sur le switch/AP concerné | Reconnecter le câble, activer le Wi-Fi, corriger le port ou déplacer le test sur un autre port |
+| Un utilisateur n'accède pas au réseau | Câble débranché, Wi-Fi non associé, port down | Vérifier le terminal, le câble ou l'association Wi-Fi, puis l'interface côté switch ou AP | Reconnecter le câble, activer le Wi-Fi, corriger le port ou déplacer le test sur un autre port |
 | Le terminal est connecté mais ne joint pas le serveur | Mauvais VLAN, mauvaise adresse IP ou passerelle absente | Vérifier l'adresse IP du terminal et `display ip interface brief` sur la passerelle | Corriger l'adressage, le VLAN ou la passerelle |
 | Plusieurs utilisateurs d'un même switch sont impactés | Problème sur le switch d'accès ou son uplink | Vérifier les interfaces du switch avec `display interface brief` | Rétablir l'uplink, remplacer le câble ou corriger la configuration |
 | Les utilisateurs Wi-Fi ne se connectent pas | AP hors ligne ou problème WAC | Vérifier l'alimentation AP, la liaison AP-switch et l'état côté contrôleur | Rétablir l'AP, vérifier le switch d'accès ou l'association au WAC |
 | L'accès Internet ne fonctionne pas mais le LAN répond | Routeur, firewall ou lien WAN en cause | Vérifier le routeur/firewall et le lien de sortie | Corriger la route, la règle de sécurité ou escalader vers l'opérateur |
 
 Question clé : **un utilisateur n'accède pas au réseau, quel équipement vérifier en premier ?**  
-Réponse pratique : commencer par le terminal et le point d'accès immédiat au réseau, c'est-à-dire le câble/port switch pour un poste filaire, ou l'AP/association Wi-Fi pour un terminal sans fil.
+Réponse pratique : commencer par le terminal et le point d'accès immédiat au réseau, c'est-à-dire le câble/port switch pour un poste filaire, ou l'AP/association Wi-Fi pour un terminal sans fil. Ensuite seulement, remonter vers le switch d'accès, la passerelle, le firewall, puis les services distants.
 
 ---
 
@@ -222,7 +230,7 @@ Consigne :
 
 1. Une petite entreprise possède 10 PCs, 1 serveur, 1 accès Internet, 1 réseau Wi-Fi et 1 firewall.
 2. Dessiner une topologie logique.
-3. Placer les rôles : terminal, switch, router/firewall, AP, WAC, server.
+3. Placer les rôles : terminal, switch, router, firewall, AP, WAC, server.
 4. Marquer en couleur :
    - source ;
    - channel ;
@@ -337,6 +345,9 @@ A: Centraliser la gestion de plusieurs points d'accès Wi-Fi.
 
 Q: Quelle est la différence entre LAN et WAN ?  
 A: Un LAN couvre une zone locale ; un WAN couvre une grande distance.
+
+Q: La source et la destination sont-elles toujours fixes ?  
+A: Non. Elles dépendent du sens de l'échange : un serveur peut être destination pendant une requête puis source pendant la réponse.
 
 Q: Quelle commande Huawei donne une vue rapide des interfaces ?  
 A: `display interface brief`.
