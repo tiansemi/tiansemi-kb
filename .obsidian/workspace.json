@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/Data Communication Network.md",
+                "file": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/00 Program Overview/HCIA-Datacom V2.0 Learning Path.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Data Communication Network"
+              "title": "HCIA-Datacom V2.0 Learning Path"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 344.5
   },
   "right": {
     "id": "d021dd720729231e",
@@ -168,8 +168,8 @@
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
+              "icon": "lucide-ghost",
+              "title": "calendar"
             }
           }
         ]
@@ -189,11 +189,37 @@
       "command-palette:Ouvrir la palette de commandes": false,
       "bases:Créer une nouvelle base": false,
       "templater-obsidian:Templater": false,
-      "omnisearch:Omnisearch": false
+      "omnisearch:Omnisearch": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
   "active": "8dbbcdbb06ee8a82",
   "lastOpenFiles": [
+    "07 Automation/Scripts/__pycache__/publish_to_tiansemi_site.cpython-314.pyc",
+    "07 Automation/Scripts/__pycache__",
+    "07 Automation/Scripts/publish_to_tiansemi_site.py",
+    "03 Content/Blog/Exported/hcia-datacom-comprendre-reseaux-communication-donnees.md",
+    "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/00 Program Overview/Home.md",
+    "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/00 Program Overview/HCIA-Datacom V2.0 Learning Path.md",
+    "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/Data Communication Network.md",
+    "01 Domains/Huawei/01 Datacom/HCIP-Datacom/Home.md",
+    "01 Domains/Huawei/02 Security/Home.md",
+    "01 Domains/Huawei/03 WLAN/HCIP-WLAN/Home.md",
+    "01 Domains/Huawei/03 WLAN/HCIE-WLAN/Home.md",
+    "01 Domains/Huawei/03 WLAN/HCIA-WLAN/Home.md",
+    "01 Domains/Huawei/03 WLAN/Home.md",
+    "01 Domains/Huawei/03 WLAN/HCIP-WLAN",
+    "01 Domains/Huawei/03 WLAN/HCIE-WLAN",
+    "01 Domains/Huawei/03 WLAN/HCIA-WLAN",
+    "01 Domains/Huawei/03 WLAN",
+    "01 Domains/Huawei/02 Security/HCIE-Security/Home.md",
+    "01 Domains/Huawei/02 Security/HCIE-Security",
+    "01 Domains/Huawei/02 Security/HCIP-Security/Home.md",
+    "01 Domains/Huawei/02 Security/HCIP-Security",
+    "01 Domains/Huawei/02 Security/HCIA-Security/Home.md",
+    "01 Domains/Huawei/02 Security/HCIA-Security",
+    "01 Domains/Huawei/01 Datacom/HCIE-Datacom/Home.md",
+    "01 Domains/Huawei/01 Datacom/HCIE-Datacom",
     "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/Home.md",
     "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/Home.md",
     "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/09 Labs/04 Ethernet Link Aggregation Configuration.md",
@@ -203,29 +229,7 @@
     "01 Domains/Huawei/04 Labs.md",
     "01 Domains/Huawei/01 Datacom.md",
     "09 Dashboards/Content Dashboard.md",
-    "07 Automation/Exports/kb-index.json",
     "01 Domains/Cisco/03 IP Connectivity/OSPF DR Election.md",
-    "09 Dashboards/Knowledge Dashboard.md",
-    "07 Automation/Prompts/Prompt Library.md",
-    "06 Templates/Content/TianSemi Site Article Template.md",
-    "06 Templates/Content/Newsletter Template.md",
-    "06 Templates/Content/Instagram Carousel Template.md",
-    "06 Templates/Content/Quiz Template.md",
-    "06 Templates/Content/Video Script Template.md",
-    "06 Templates/Content/LinkedIn Post Template.md",
-    "06 Templates/Content/Blog Article Template.md",
-    "06 Templates/Templater/Atomic Note Template.md",
-    "06 Templates/Templater/Technical Topic Template.md",
-    "Home.md",
-    "_bootstrap_tsos.py",
-    "99 Archive",
-    "09 Dashboards",
-    "08 Glossary",
-    "07 Automation/Prompts",
-    "07 Automation/Scripts",
-    "07 Automation/Exports",
-    "07 Automation/Blueprints",
-    "07 Automation",
-    "Bienvenue.md"
+    "09 Dashboards/Knowledge Dashboard.md"
   ]
 }
