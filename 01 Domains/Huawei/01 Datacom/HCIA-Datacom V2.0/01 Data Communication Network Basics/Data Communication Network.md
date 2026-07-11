@@ -11,7 +11,7 @@ status: "draft"
 author: "MOULO OHOLO Jean Noel"
 reviewed: false
 created: 2026-07-06
-updated: 2026-07-06
+updated: 2026-07-11
 module: "01 Data Communication Network Basics"
 type: "topic"
 source: "Training Material"
@@ -49,8 +49,9 @@ labs:
   - "Identifier le rôle de chaque équipement dans une topologie campus"
 assets:
   - "04 Assets/Diagrams/Huawei/HCIA-Datacom V2.0"
-publication_status: "not-started"
-site_url:
+blog: "03 Content/Blog/Exported/hcia-datacom-comprendre-reseaux-communication-donnees.md"
+publication_status: "generated"
+site_url: "https://tiansemi.github.io/apprentissage/reseaux/hcia-datacom-comprendre-reseaux-communication-donnees"
 ---
 
 # Data Communication Network
@@ -366,9 +367,10 @@ A: `display interface brief`.
 
 | Canal         | Statut    | Lien |
 | ------------- | --------- | ---- |
-| Site TianSemi | À générer |      |
-| Blog          | À générer |      |
+| Site TianSemi | Généré | 03 Content/Blog/Exported/hcia-datacom-comprendre-reseaux-communication-donnees.md |
+| Blog          | Généré | 03 Content/Blog/Exported/hcia-datacom-comprendre-reseaux-communication-donnees.md |
 | LinkedIn      | À générer |      |
 | TikTok        | À générer |      |
 | YouTube       | À générer |      |
 | Quiz          | À générer |      |
+

@@ -24,7 +24,7 @@ def parse_value(value):
 def read_frontmatter(path):
     text = path.read_text(encoding="utf-8", errors="ignore")
     lines = text.splitlines()
-    if not lines or lines[0].strip() != "---":
+    if not lines or lines[0].lstrip("\ufeff").strip() != "---":
         return {}
     data = {}
     current_key = None
@@ -32,9 +32,9 @@ def read_frontmatter(path):
         if line.strip() == "---":
             break
         if line.startswith("  - ") and current_key:
-            data.setdefault(current_key, [])
-            if isinstance(data[current_key], list):
-                data[current_key].append(line[4:].strip().strip("\"'"))
+            if not isinstance(data.get(current_key), list):
+                data[current_key] = []
+            data[current_key].append(line[4:].strip().strip("\"'"))
             continue
         if ":" in line:
             key, value = line.split(":", 1)
