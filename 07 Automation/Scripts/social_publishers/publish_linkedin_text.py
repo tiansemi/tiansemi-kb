@@ -3,284 +3,230 @@
 import argparse
 import json
 import os
-import sys
+import re
+from datetime import datetime, timezone
 from pathlib import Path
-from urllib.error import HTTPError, URLError
-from urllib.request import Request, urlopen
+from urllib import request, error, parse
 
 ROOT = Path(__file__).resolve().parents[3]
 DEFAULT_CRED_DIR = Path(
     r"C:\Users\MOULO Oholo Jean\OneDrive - Institut National Polytechnique Félix HOUPHOUËT-BOIGNY - INP-HB\PROJETS\TS\cred"
 )
-LINKEDIN_UGC_ENDPOINT = "https://api.linkedin.com/v2/ugcPosts"
+LINKEDIN_POSTS_URL = "https://api.linkedin.com/rest/posts"
+LINKEDIN_INTROSPECT_URL = "https://www.linkedin.com/oauth/v2/introspectToken"
+LINKEDIN_VERSION = "202606"
 
 
 def read_text(path: Path) -> str:
-    return path.read_text(encoding="utf-8-sig")
-
-
-def read_secret(path: Path) -> str:
-    if not path.exists():
-        raise FileNotFoundError(f"Secret file not found: {path}")
     return path.read_text(encoding="utf-8-sig").strip()
 
 
-def mask_secret(value: str, visible: int = 6) -> str:
-    if len(value) <= visible * 2:
-        return "***"
-    return f"{value[:visible]}...{value[-visible:]}"
-
-
-def parse_frontmatter(markdown: str) -> tuple[dict[str, object], str]:
-    text = markdown.lstrip("\ufeff")
+def parse_frontmatter(text: str) -> tuple[dict[str, str], str]:
+    text = text.lstrip("\ufeff")
     if not text.startswith("---\n"):
         return {}, text.strip()
-
     end = text.find("\n---", 4)
     if end == -1:
         return {}, text.strip()
-
-    raw_frontmatter = text[4:end].strip().splitlines()
+    raw = text[4:end].splitlines()
     body = text[end + 5 :].strip()
-    data: dict[str, object] = {}
-    current_key: str | None = None
-
-    for line in raw_frontmatter:
-        stripped = line.strip()
-        if stripped.startswith("- ") and current_key:
-            existing = data.get(current_key)
-            if not isinstance(existing, list):
-                existing = []
-                data[current_key] = existing
-            existing.append(stripped[2:].strip().strip('"\''))
-            continue
-        if ":" not in line:
+    meta: dict[str, str] = {}
+    for line in raw:
+        if ":" not in line or line.lstrip().startswith("#"):
             continue
         key, value = line.split(":", 1)
-        current_key = key.strip()
-        value = value.strip()
-        if value == "":
-            data[current_key] = ""
-        elif value.startswith("[") and value.endswith("]"):
-            data[current_key] = []
-        else:
-            data[current_key] = value.strip('"\'')
-
-    return data, body
+        meta[key.strip()] = value.strip().strip('"\'')
+    return meta, body
 
 
-def markdown_to_linkedin_text(body: str) -> str:
+def extract_post_text(markdown: str) -> str:
+    _, body = parse_frontmatter(markdown)
     lines = []
     for line in body.splitlines():
-        stripped = line.strip()
-        if stripped == "# LinkedIn Post":
-            continue
-        if stripped.startswith("---"):
+        if line.strip() == "# LinkedIn Post":
             continue
         lines.append(line.rstrip())
-
     text = "\n".join(lines).strip()
-    while "\n\n\n" in text:
-        text = text.replace("\n\n\n", "\n\n")
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    if not text:
+        raise ValueError("Draft LinkedIn vide apres extraction.")
     return text
 
 
-def find_latest_linkedin_draft(root: Path) -> Path:
-    search_root = root / "03 Content" / "Social Media" / "Huawei" / "HCIA-Datacom"
-    candidates = list(search_root.rglob("linkedin-post.md"))
-    if not candidates:
-        raise FileNotFoundError(f"No linkedin-post.md found under {search_root}")
-    return max(candidates, key=lambda path: path.stat().st_mtime)
+def load_secret(path: Path, label: str) -> str:
+    if not path.exists():
+        raise FileNotFoundError(f"Fichier requis manquant pour {label}: {path}")
+    value = read_text(path)
+    if not value:
+        raise ValueError(f"Fichier vide pour {label}: {path}")
+    return value
 
 
-def linkedin_payload(
-    *,
-    person_urn: str,
-    text: str,
-    source_url: str,
-    title: str,
-    description: str,
-    visibility: str,
-    text_only: bool,
-) -> dict[str, object]:
-    share_content: dict[str, object] = {
-        "shareCommentary": {"text": text},
-        "shareMediaCategory": "NONE",
-    }
+def load_yaml_value(path: Path, key: str) -> str | None:
+    if not path.exists():
+        return None
+    for line in path.read_text(encoding="utf-8-sig").splitlines():
+        if ":" not in line or line.lstrip().startswith("#"):
+            continue
+        current_key, value = line.split(":", 1)
+        if current_key.strip() == key:
+            return value.strip().strip('"\'')
+    return None
 
-    if source_url and not text_only:
-        share_content["shareMediaCategory"] = "ARTICLE"
-        share_content["media"] = [
-            {
-                "status": "READY",
-                "originalUrl": source_url,
-                "title": {"text": title[:200]},
-                "description": {"text": description[:256]},
-            }
-        ]
 
+def build_payload(author_urn: str, post_text: str) -> dict[str, object]:
     return {
-        "author": person_urn,
+        "author": author_urn,
+        "commentary": post_text,
+        "visibility": "PUBLIC",
+        "distribution": {
+            "feedDistribution": "MAIN_FEED",
+            "targetEntities": [],
+            "thirdPartyDistributionChannels": [],
+        },
         "lifecycleState": "PUBLISHED",
-        "specificContent": {
-            "com.linkedin.ugc.ShareContent": share_content,
-        },
-        "visibility": {
-            "com.linkedin.ugc.MemberNetworkVisibility": visibility,
-        },
+        "isReshareDisabledByAuthor": False,
     }
 
 
-def publish_to_linkedin(payload: dict[str, object], token: str) -> tuple[int, str, str]:
-    body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
-    request = Request(
-        LINKEDIN_UGC_ENDPOINT,
+def introspect_token(cred_dir: Path, token: str) -> dict[str, object] | None:
+    auth_yaml = cred_dir / "linkedin_auth_keys.yaml"
+    client_id = load_yaml_value(auth_yaml, "client_id")
+    client_secret = load_yaml_value(auth_yaml, "client_secret")
+    if not client_id or not client_secret:
+        return None
+    body = parse.urlencode({"client_id": client_id, "client_secret": client_secret, "token": token}).encode()
+    req = request.Request(
+        LINKEDIN_INTROSPECT_URL,
         data=body,
+        method="POST",
+        headers={"Content-Type": "application/x-www-form-urlencoded"},
+    )
+    try:
+        with request.urlopen(req, timeout=30) as resp:
+            return json.loads(resp.read().decode("utf-8"))
+    except Exception:
+        return None
+
+
+def post_to_linkedin(token: str, payload: dict[str, object]) -> dict[str, object]:
+    data = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+    req = request.Request(
+        LINKEDIN_POSTS_URL,
+        data=data,
         method="POST",
         headers={
             "Authorization": f"Bearer {token}",
             "Content-Type": "application/json",
+            "LinkedIn-Version": LINKEDIN_VERSION,
             "X-Restli-Protocol-Version": "2.0.0",
         },
     )
-
     try:
-        with urlopen(request, timeout=30) as response:
-            status = response.status
-            response_body = response.read().decode("utf-8", errors="replace")
-            post_id = response.headers.get("X-RestLi-Id", "")
-            return status, post_id, response_body
-    except HTTPError as exc:
-        error_body = exc.read().decode("utf-8", errors="replace")
-        raise RuntimeError(f"LinkedIn API error {exc.code}: {error_body}") from exc
-    except URLError as exc:
-        raise RuntimeError(f"LinkedIn network error: {exc.reason}") from exc
+        with request.urlopen(req, timeout=30) as resp:
+            body = resp.read().decode("utf-8", errors="replace")
+            return {
+                "ok": 200 <= resp.status < 300,
+                "status": resp.status,
+                "headers": dict(resp.headers.items()),
+                "body": body,
+            }
+    except error.HTTPError as exc:
+        body = exc.read().decode("utf-8", errors="replace")
+        return {
+            "ok": False,
+            "status": exc.code,
+            "headers": dict(exc.headers.items()),
+            "body": body,
+        }
 
 
-def write_json(path: Path, payload: dict[str, object]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+def linkedin_url_from_id(post_id: str | None) -> str | None:
+    if not post_id:
+        return None
+    return f"https://www.linkedin.com/feed/update/{post_id}/"
+
+
+def write_result(draft: Path, result: dict[str, object]) -> Path:
+    result_path = draft.parent / "linkedin-publish-result.json"
+    result_path.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return result_path
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(
-        description="Publish or dry-run a LinkedIn post from a TSOS linkedin-post.md draft."
-    )
-    parser.add_argument(
-        "draft",
-        nargs="?",
-        type=Path,
-        help="Path to linkedin-post.md. Defaults to the latest Huawei HCIA-Datacom draft.",
-    )
-    parser.add_argument(
-        "--cred-dir",
-        type=Path,
-        default=Path(os.environ.get("TSOS_CRED_DIR", DEFAULT_CRED_DIR)),
-        help="Directory containing linkedin_access_token.txt and linkedin_person_urn.txt.",
-    )
-    parser.add_argument(
-        "--visibility",
-        choices=["PUBLIC", "CONNECTIONS"],
-        default="PUBLIC",
-        help="LinkedIn network visibility for the post.",
-    )
-    parser.add_argument(
-        "--text-only",
-        action="store_true",
-        help="Publish as text only instead of attaching the source URL as an article.",
-    )
-    parser.add_argument(
-        "--payload-out",
-        type=Path,
-        help="Optional path where the JSON payload should be saved.",
-    )
-    parser.add_argument(
-        "--publish",
-        action="store_true",
-        help="Actually publish to LinkedIn. Without this flag, only a dry-run is performed.",
-    )
-    parser.add_argument(
-        "--allow-non-person-author",
-        action="store_true",
-        help="Allow publishing when the author URN is not urn:li:person:*. Use only if your app/token is configured for organization posting.",
-    )
+    parser = argparse.ArgumentParser(description="Publish a TSOS LinkedIn draft as a LinkedIn organization/page post.")
+    parser.add_argument("draft", type=Path, help="Path to linkedin-post.md")
+    parser.add_argument("--cred-dir", type=Path, default=Path(os.environ.get("TSOS_CRED_DIR", DEFAULT_CRED_DIR)))
+    parser.add_argument("--organization-urn", default=os.environ.get("LINKEDIN_ORGANIZATION_URN"))
+    parser.add_argument("--publish", action="store_true", help="Actually publish. Without this flag, dry-run only.")
+    parser.add_argument("--check-token", action="store_true", help="Show non-secret token metadata such as active status and scopes.")
     args = parser.parse_args()
 
-    draft = args.draft or find_latest_linkedin_draft(ROOT)
-    if not draft.is_absolute():
-        draft = (ROOT / draft).resolve()
+    draft = args.draft.resolve()
+    if not draft.exists():
+        raise FileNotFoundError(draft)
 
-    cred_dir = args.cred_dir
-    token_path = cred_dir / "linkedin_access_token.txt"
-    person_urn_path = cred_dir / "linkedin_person_urn.txt"
+    token = load_secret(args.cred_dir / "linkedin_access_token.txt", "LinkedIn access token")
+    organization_urn = args.organization_urn
+    if not organization_urn:
+        organization_urn = load_secret(args.cred_dir / "linkedin_organization_urn.txt", "LinkedIn organization URN")
+    if not organization_urn.startswith("urn:li:organization:"):
+        raise ValueError("L'URN organisation doit ressembler a urn:li:organization:123456")
 
-    token = read_secret(token_path)
-    person_urn = read_secret(person_urn_path)
-    meta, body = parse_frontmatter(read_text(draft))
-    post_text = markdown_to_linkedin_text(body)
-    source_url = str(meta.get("source_url", "")).strip()
-    title = "TianSemi HCIA-Datacom"
-    description = "Ressource TianSemi pour progresser en Huawei HCIA-Datacom."
+    markdown = read_text(draft)
+    meta, _ = parse_frontmatter(markdown)
+    post_text = extract_post_text(markdown)
+    payload = build_payload(organization_urn, post_text)
+    token_info = introspect_token(args.cred_dir, token)
 
-    author_is_person = person_urn.startswith("urn:li:person:")
-    if not author_is_person:
-        print(
-            "WARNING: linkedin_person_urn.txt does not contain a member URN "
-            "(expected urn:li:person:*)."
-        )
-        print(
-            "Current value looks like an organization/company author. "
-            "Dry-run is allowed, but publishing requires --allow-non-person-author."
-        )
-        if args.publish and not args.allow_non_person_author:
-            raise SystemExit(
-                "Refusing to publish with a non-person author URN. "
-                "Use --allow-non-person-author only after confirming LinkedIn organization permissions."
-            )
-
-    payload = linkedin_payload(
-        person_urn=person_urn,
-        text=post_text,
-        source_url=source_url,
-        title=title,
-        description=description,
-        visibility=args.visibility,
-        text_only=args.text_only,
-    )
-
-    if args.payload_out:
-        out = args.payload_out if args.payload_out.is_absolute() else (ROOT / args.payload_out)
-        write_json(out, payload)
-        print(f"Payload saved: {out}")
-
-    print("LinkedIn publisher")
-    print(f"Mode: {'PUBLISH' if args.publish else 'DRY-RUN'}")
-    print(f"Draft: {draft}")
-    print(f"Credential directory: {cred_dir}")
-    print(f"Author URN: {person_urn}")
-    print(f"Access token: {mask_secret(token)}")
-    print(f"Visibility: {args.visibility}")
-    print(f"Share media category: {payload['specificContent']['com.linkedin.ugc.ShareContent']['shareMediaCategory']}")
-    print(f"Source URL: {source_url or '(none)'}")
-    print("\n--- Post text preview ---\n")
-    print(post_text)
-    print("\n--- End preview ---")
-
-    if not args.publish:
-        print("\nDry-run only. Add --publish to create the LinkedIn post.")
+    if args.check_token:
+        public_token_info = None
+        if token_info:
+            public_token_info = {
+                "active": token_info.get("active"),
+                "scope": token_info.get("scope"),
+                "expires_at": token_info.get("expires_at"),
+            }
+        print(json.dumps(public_token_info, ensure_ascii=False, indent=2))
         return 0
 
-    status, post_id, response_body = publish_to_linkedin(payload, token)
-    print(f"\nPublished to LinkedIn. HTTP status: {status}")
-    if post_id:
-        print(f"LinkedIn post id: {post_id}")
-    if response_body:
-        print(response_body)
-    return 0
+    if not args.publish:
+        preview = {
+            "mode": "dry-run",
+            "author": organization_urn,
+            "draft": str(draft),
+            "source_url": meta.get("source_url"),
+            "text_length": len(post_text),
+            "token_scope": token_info.get("scope") if token_info else None,
+            "required_scope_for_organization": "w_organization_social",
+            "payload": payload,
+        }
+        print(json.dumps(preview, ensure_ascii=False, indent=2))
+        return 0
+
+    api_result = post_to_linkedin(token, payload)
+    headers = api_result.get("headers", {})
+    post_id = headers.get("x-restli-id") if isinstance(headers, dict) else None
+    result = {
+        "platform": "LinkedIn",
+        "publisher": "organization",
+        "organization_urn": organization_urn,
+        "draft": draft.relative_to(ROOT).as_posix() if draft.is_relative_to(ROOT) else str(draft),
+        "source_url": meta.get("source_url"),
+        "published_at": datetime.now(timezone.utc).isoformat(),
+        "ok": api_result["ok"],
+        "status": api_result["status"],
+        "token_scope": token_info.get("scope") if token_info else None,
+        "required_scope_for_organization": "w_organization_social",
+        "post_id": post_id,
+        "linkedin_url": linkedin_url_from_id(post_id),
+        "api_body": api_result.get("body", ""),
+    }
+    result_path = write_result(draft, result)
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+    print(f"RESULT {result_path}")
+    return 0 if api_result["ok"] else 1
 
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
-
-

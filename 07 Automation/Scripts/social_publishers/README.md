@@ -1,14 +1,14 @@
-# Social Publishers
+﻿# Social Publishers
 
-Ce dossier contient les scripts de publication réelle par plateforme.
+Ce dossier contient les scripts de publication rÃ©elle par plateforme.
 
-## Règle de sécurité
+## RÃ¨gle de sÃ©curitÃ©
 
 - Pas de secret dans Git.
-- Les credentials restent dans `C:\Users\MOULO Oholo Jean\OneDrive - Institut National Polytechnique Félix HOUPHOUËT-BOIGNY - INP-HB\PROJETS\TS\cred`.
+- Les credentials restent dans `C:\Users\MOULO Oholo Jean\OneDrive - Institut National Polytechnique FÃ©lix HOUPHOUÃ‹T-BOIGNY - INP-HB\PROJETS\TS\cred`.
 - Les scripts doivent lire les secrets via `TSOS_CRED_DIR` ou variables d'environnement.
-- Toute publication réelle doit exiger un flag explicite `--publish`.
-- Le mode par défaut doit rester `dry-run`.
+- Toute publication rÃ©elle doit exiger un flag explicite `--publish`.
+- Le mode par dÃ©faut doit rester `dry-run`.
 
 ## LinkedIn
 
@@ -22,27 +22,27 @@ cred/
   linkedin_person_urn.txt
 ```
 
-Les deux fichiers peuvent contenir directement la valeur, avec ou sans retour à la ligne final.
+Les deux fichiers peuvent contenir directement la valeur, avec ou sans retour Ã  la ligne final.
 
-Dry-run par défaut, avec le dernier draft Huawei HCIA-Datacom :
+Dry-run par dÃ©faut, avec le dernier draft Huawei HCIA-Datacom :
 
 ```powershell
 python "07 Automation/Scripts/social_publishers/publish_linkedin_text.py"
 ```
 
-Dry-run avec un draft précis :
+Dry-run avec un draft prÃ©cis :
 
 ```powershell
 python "07 Automation/Scripts/social_publishers/publish_linkedin_text.py" "03 Content/Social Media/Huawei/HCIA-Datacom/2026-07-11-data-communication-network/linkedin-post.md"
 ```
 
-Sauvegarder le JSON envoyé à LinkedIn pour revue :
+Sauvegarder le JSON envoyÃ© Ã  LinkedIn pour revue :
 
 ```powershell
 python "07 Automation/Scripts/social_publishers/publish_linkedin_text.py" --payload-out "07 Automation/Exports/linkedin_payload_preview.json"
 ```
 
-Publier réellement :
+Publier rÃ©ellement :
 
 ```powershell
 python "07 Automation/Scripts/social_publishers/publish_linkedin_text.py" --publish
@@ -50,13 +50,37 @@ python "07 Automation/Scripts/social_publishers/publish_linkedin_text.py" --publ
 Note author URN :
 
 - Pour publier comme membre LinkedIn, `linkedin_person_urn.txt` doit contenir une valeur de type `urn:li:person:...`.
-- Si le fichier contient une URN d'organisation ou de company, le dry-run fonctionne, mais la publication réelle est bloquée par défaut.
-- Pour publier comme organisation, il faut confirmer que l'application LinkedIn et le token disposent des permissions adaptées, puis utiliser `--allow-non-person-author` en plus de `--publish`.
+- Si le fichier contient une URN d'organisation ou de company, le dry-run fonctionne, mais la publication rÃ©elle est bloquÃ©e par dÃ©faut.
+- Pour publier comme organisation, il faut confirmer que l'application LinkedIn et le token disposent des permissions adaptÃ©es, puis utiliser `--allow-non-person-author` en plus de `--publish`.
 
-## Priorité d'implémentation
+## PrioritÃ© d'implÃ©mentation
 
 1. LinkedIn texte + lien article.
 2. Facebook Page texte + lien.
-3. YouTube metadata + upload vidéo quand les vidéos seront prêtes.
-4. TikTok upload vidéo quand les accès API sont validés.
-5. Instagram carousel quand les visuels carrés seront générés.
+3. YouTube metadata + upload vidÃ©o quand les vidÃ©os seront prÃªtes.
+4. TikTok upload vidÃ©o quand les accÃ¨s API sont validÃ©s.
+5. Instagram carousel quand les visuels carrÃ©s seront gÃ©nÃ©rÃ©s.
+## LinkedIn page publishing
+
+Script : `publish_linkedin_text.py`
+
+Publication dry-run :
+
+```powershell
+python "07 Automation/Scripts/social_publishers/publish_linkedin_text.py" "03 Content/Social Media/Huawei/HCIA-Datacom/2026-07-11-data-communication-network/linkedin-post.md"
+```
+
+Vérification non secrète du token :
+
+```powershell
+python "07 Automation/Scripts/social_publishers/publish_linkedin_text.py" "03 Content/Social Media/Huawei/HCIA-Datacom/2026-07-11-data-communication-network/linkedin-post.md" --check-token
+```
+
+Publication réelle :
+
+```powershell
+python "07 Automation/Scripts/social_publishers/publish_linkedin_text.py" "03 Content/Social Media/Huawei/HCIA-Datacom/2026-07-11-data-communication-network/linkedin-post.md" --publish
+```
+
+Pour publier comme page/organisation TianSemi, le token doit inclure `w_organization_social`. Le scope `w_member_social` publie seulement comme profil membre.
+

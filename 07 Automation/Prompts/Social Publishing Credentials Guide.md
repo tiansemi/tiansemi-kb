@@ -1,22 +1,22 @@
-# Social Publishing Credentials Guide
+﻿# Social Publishing Credentials Guide
 
-## Principe de sécurité
+## Principe de sÃ©curitÃ©
 
-Les credentials ne doivent jamais être stockés dans TSOS ni dans le dépôt du site.
+Les credentials ne doivent jamais Ãªtre stockÃ©s dans TSOS ni dans le dÃ©pÃ´t du site.
 
-Dossier local prévu :
+Dossier local prÃ©vu :
 
 ```text
-C:\Users\MOULO Oholo Jean\OneDrive - Institut National Polytechnique Félix HOUPHOUËT-BOIGNY - INP-HB\PROJETS\TS\cred
+C:\Users\MOULO Oholo Jean\OneDrive - Institut National Polytechnique FÃ©lix HOUPHOUÃ‹T-BOIGNY - INP-HB\PROJETS\TS\cred
 ```
 
-Variable d'environnement recommandée :
+Variable d'environnement recommandÃ©e :
 
 ```powershell
-$env:TSOS_CRED_DIR="C:\Users\MOULO Oholo Jean\OneDrive - Institut National Polytechnique Félix HOUPHOUËT-BOIGNY - INP-HB\PROJETS\TS\cred"
+$env:TSOS_CRED_DIR="C:\Users\MOULO Oholo Jean\OneDrive - Institut National Polytechnique FÃ©lix HOUPHOUÃ‹T-BOIGNY - INP-HB\PROJETS\TS\cred"
 ```
 
-## Structure recommandée du dossier cred
+## Structure recommandÃ©e du dossier cred
 
 ```text
 cred/
@@ -36,7 +36,7 @@ cred/
 
 Source officielle : https://learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/share-on-linkedin
 
-À préparer :
+Ã€ prÃ©parer :
 
 - une application LinkedIn Developer ;
 - le produit Share on LinkedIn ;
@@ -54,25 +54,25 @@ POST https://api.linkedin.com/v2/ugcPosts
 
 Source officielle : https://developers.google.com/youtube/v3/guides/uploading_a_video
 
-À préparer :
+Ã€ prÃ©parer :
 
 - un projet Google Cloud ;
-- YouTube Data API v3 activée ;
+- YouTube Data API v3 activÃ©e ;
 - un client OAuth ;
-- un token OAuth autorisant l'upload vidéo ;
-- les fichiers vidéo générés ou montés hors TSOS.
+- un token OAuth autorisant l'upload vidÃ©o ;
+- les fichiers vidÃ©o gÃ©nÃ©rÃ©s ou montÃ©s hors TSOS.
 
 ## TikTok
 
 Source officielle : https://developers.tiktok.com/doc/content-posting-api-get-started/
 
-À préparer :
+Ã€ prÃ©parer :
 
 - une application TikTok for Developers ;
-- accès à la Content Posting API ;
+- accÃ¨s Ã  la Content Posting API ;
 - OAuth client key / secret ;
 - access token ;
-- vidéos prêtes au format vertical.
+- vidÃ©os prÃªtes au format vertical.
 
 ## Facebook / Instagram
 
@@ -81,19 +81,25 @@ Sources officielles :
 - https://developers.facebook.com/docs/pages-api/posts/
 - https://developers.facebook.com/docs/instagram-platform/
 
-À préparer :
+Ã€ prÃ©parer :
 
 - application Meta Developer ;
 - Page Facebook ;
-- compte Instagram professionnel connecté à la Page ;
-- permissions nécessaires selon le type de publication ;
+- compte Instagram professionnel connectÃ© Ã  la Page ;
+- permissions nÃ©cessaires selon le type de publication ;
 - access token de Page ou token long-lived selon le workflow.
 
-## Règle TianSemi
+## RÃ¨gle TianSemi
 
-1. Générer les drafts dans TSOS.
+1. GÃ©nÃ©rer les drafts dans TSOS.
 2. Valider manuellement le contenu.
-3. Préparer les assets visuels/vidéo.
+3. PrÃ©parer les assets visuels/vidÃ©o.
 4. Publier d'abord en mode dry-run.
-5. Publier réellement seulement avec un flag explicite comme `--publish`.
-6. Sauvegarder les URLs publiées dans le dossier du social pack.
+5. Publier rÃ©ellement seulement avec un flag explicite comme `--publish`.
+6. Sauvegarder les URLs publiÃ©es dans le dossier du social pack.
+
+
+## Note LinkedIn organisation
+
+Pour publier comme page, le token doit inclure w_organization_social; w_member_social ne suffit pas.
+

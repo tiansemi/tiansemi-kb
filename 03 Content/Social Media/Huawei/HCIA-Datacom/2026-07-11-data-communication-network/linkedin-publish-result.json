@@ -1,0 +1,12 @@
+﻿{
+    "token_scope":  "w_member_social",
+    "next_action":  "Regenerate a LinkedIn token with w_organization_social for the TianSemi organization/page, then rerun publish_linkedin_text.py --publish.",
+    "platform":  "LinkedIn",
+    "reason":  "LinkedIn rejected organization publishing because the active token does not include organization publishing permissions.",
+    "status":  "blocked",
+    "ok":  false,
+    "organization_urn":  "urn:li:organization:142874764",
+    "publisher":  "organization",
+    "required_scope_for_organization":  "w_organization_social",
+    "source_url":  "https://tiansemi.github.io/apprentissage/reseaux/hcia-datacom-comprendre-reseaux-communication-donnees/"
+}

@@ -1,5 +1,5 @@
 {
-  "count": 128,
+  "count": 132,
   "items": [
     {
       "path": "01 Domains/Cisco/01 Network Fundamentals/ARP.md",
@@ -1384,12 +1384,12 @@
       "vendor": null,
       "category": null,
       "status": "draft",
-      "publication_status": "not-published",
+      "publication_status": "blocked-credentials",
       "tags": []
     },
     {
       "path": "03 Content/Social Media/Huawei/HCIA-Datacom/2026-07-11-data-communication-network/publishing-checklist.md",
-      "title": "Publishing Checklist — HCIA-Datacom #1",
+      "title": "Publishing Checklist — HCIA-Datacom : comprendre les réseaux de communication de données",
       "id": null,
       "domain": null,
       "vendor": null,
@@ -1400,17 +1400,17 @@
     },
     {
       "path": "03 Content/Social Media/Huawei/HCIA-Datacom/2026-07-11-data-communication-network/README.md",
-      "title": "Social Pack — HCIA-Datacom Data Communication Network",
+      "title": "Social Pack — HCIA-Datacom : comprendre les réseaux de communication de données",
       "id": null,
       "domain": null,
       "vendor": null,
       "category": null,
       "status": "draft",
-      "publication_status": "not-published",
+      "publication_status": "blocked-linkedin-credentials",
       "tags": [
+        "social-media",
         "huawei",
-        "hcia-datacom",
-        "social-media"
+        "hcia-datacom"
       ]
     },
     {
@@ -1755,6 +1755,50 @@
     {
       "path": "Home.md",
       "title": "Home",
+      "id": null,
+      "domain": null,
+      "vendor": null,
+      "category": null,
+      "status": null,
+      "publication_status": null,
+      "tags": []
+    },
+    {
+      "path": "pythonenv/Lib/site-packages/idna-3.18.dist-info/licenses/LICENSE.md",
+      "title": "LICENSE",
+      "id": null,
+      "domain": null,
+      "vendor": null,
+      "category": null,
+      "status": null,
+      "publication_status": null,
+      "tags": []
+    },
+    {
+      "path": "pythonenv/Lib/site-packages/pip/_vendor/idna/LICENSE.md",
+      "title": "LICENSE",
+      "id": null,
+      "domain": null,
+      "vendor": null,
+      "category": null,
+      "status": null,
+      "publication_status": null,
+      "tags": []
+    },
+    {
+      "path": "pythonenv/Lib/site-packages/pip-26.1.2.dist-info/licenses/src/pip/_vendor/idna/LICENSE.md",
+      "title": "LICENSE",
+      "id": null,
+      "domain": null,
+      "vendor": null,
+      "category": null,
+      "status": null,
+      "publication_status": null,
+      "tags": []
+    },
+    {
+      "path": "pythonenv/Lib/site-packages/pyparsing/ai/best_practices.md",
+      "title": "best_practices",
       "id": null,
       "domain": null,
       "vendor": null,
