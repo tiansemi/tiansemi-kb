@@ -1,4 +1,4 @@
-﻿# Social Publishing Credentials Guide
+# Social Publishing Credentials Guide
 
 ## Principe de sécurité
 
