@@ -191,6 +191,9 @@
   },
   "active": "8dbbcdbb06ee8a82",
   "lastOpenFiles": [
+    "pythonenv/Scripts/pip.exe",
+    "pythonenv/Scripts/pip3.14.exe",
+    "pythonenv/Scripts/pip3.exe",
     "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/Home.md",
     "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/00 Program Overview/Home.md",
     "Home.md",
@@ -204,8 +207,6 @@
     "pythonenv/Lib/site-packages/oauthlib/oauth2/rfc6749/clients/__pycache__/service_application.cpython-314.pyc",
     "pythonenv/Lib/site-packages/oauthlib/oauth2/rfc6749/clients/__pycache__/web_application.cpython-314.pyc",
     "pythonenv/Lib/site-packages/oauthlib/oauth1/rfc5849/endpoints/__pycache__/request_token.cpython-314.pyc",
-    "pythonenv/Scripts/google-oauthlib-tool.exe",
-    "pythonenv/Lib/site-packages/google_auth_oauthlib-1.4.0.dist-info/licenses/LICENSE",
     "pythonenv/Lib/site-packages/idna-3.18.dist-info/licenses/LICENSE.md",
     "pythonenv/Lib/site-packages/pyparsing/ai/best_practices.md",
     "pythonenv/Lib/site-packages/pip-26.1.2.dist-info/licenses/src/pip/_vendor/idna/LICENSE.md",
@@ -225,7 +226,6 @@
     "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/Data Communication Network.md",
     "01 Domains/Huawei/01 Datacom/HCIP-Datacom/Home.md",
     "01 Domains/Huawei/02 Security/Home.md",
-    "01 Domains/Huawei/03 WLAN/HCIP-WLAN/Home.md",
-    "01 Domains/Huawei/03 WLAN/HCIE-WLAN/Home.md"
+    "01 Domains/Huawei/03 WLAN/HCIP-WLAN/Home.md"
   ]
 }
