@@ -102,4 +102,13 @@ Sources officielles :
 ## Note LinkedIn organisation
 
 Pour publier comme page, le token doit inclure w_organization_social; w_member_social ne suffit pas.
+## Politique actuelle TikTok / Facebook / Instagram
+
+À partir du 2026-07-12 :
+
+- TikTok : pas de publication automatique. TSOS génère seulement les scripts, descriptions, hashtags et assets vidéo.
+- Facebook : pas de publication automatique. TSOS génère seulement le texte, les visuels et la checklist de publication.
+- Instagram : exclu du pipeline pour l'instant.
+
+Conséquence : aucun credential TikTok, Facebook ou Instagram n'est requis maintenant.
 

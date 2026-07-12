@@ -1,25 +1,24 @@
----
+﻿---
 platform: Facebook
 status: draft
 source_url: "https://tiansemi.github.io/apprentissage/reseaux/hcia-datacom-comprendre-reseaux-communication-donnees/"
-publication_status: not-published
+publication_status: manual-only
 ---
 
 # Facebook Post
 
-Nouvelle ressource TianSemi pour démarrer le parcours Huawei HCIA-Datacom.
+Nouvelle ressource TianSemi : HCIA-Datacom, comprendre les réseaux de communication de données.
 
-Sujet : comprendre les réseaux de communication de données.
+Avant de configurer un switch ou un routeur, il faut comprendre le chemin suivi par la donnée : source, canal, destination, puis équipements intermédiaires.
 
-Avant VLAN, OSPF, NAT ou WLAN, il faut savoir expliquer le chemin d'une donnée : source, canal, destination, puis rôle des équipements.
+Dans cet article, on voit :
 
-Dans l'article :
-- les équipements essentiels : switch, routeur, firewall, AP, WAC, serveur ;
-- LAN, MAN, WAN ;
-- réseau d'entreprise vs réseau opérateur ;
-- premières commandes Huawei ;
-- mini-lab pratique.
+- le rôle du terminal, du switch, du routeur, du firewall, de l'AP, du WAC et du serveur ;
+- la différence entre LAN, MAN et WAN ;
+- comment lire une petite topologie d'entreprise ;
+- les premières commandes Huawei d'observation ;
+- un mini-lab pratique TianSemi.
 
 Lien : https://tiansemi.github.io/apprentissage/reseaux/hcia-datacom-comprendre-reseaux-communication-donnees/
 
-Objectif TianSemi : chaque notion théorique doit devenir une compétence pratique.
+#Huawei #HCIADatacom #Datacom #Réseaux #TianSemi

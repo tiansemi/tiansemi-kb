@@ -83,4 +83,36 @@ python "07 Automation/Scripts/social_publishers/publish_linkedin_text.py" "03 Co
 ```
 
 Pour publier comme page/organisation TianSemi, le token doit inclure `w_organization_social`. Le scope `w_member_social` publie seulement comme profil membre.
+## YouTube video publishing
+
+Script : `publish_youtube_video.py`
+
+Le script lit `youtube-metadata.json`, `youtube-description.md`, puis utilise les fichiers credentials hors dépôt :
+
+```text
+cred/youtube_oauth_client.json
+cred/youtube_token.json
+```
+
+Dry-run :
+
+```powershell
+python "07 Automation/Scripts/social_publishers/publish_youtube_video.py" "03 Content/Social Media/Huawei/HCIA-Datacom/2026-07-11-data-communication-network/youtube-metadata.json"
+```
+
+Publication réelle :
+
+```powershell
+python "07 Automation/Scripts/social_publishers/publish_youtube_video.py" "03 Content/Social Media/Huawei/HCIA-Datacom/2026-07-11-data-communication-network/youtube-metadata.json" --video-file "CHEMIN\VERS\VIDEO.mp4" --publish
+```
+
+Par défaut, les vidéos doivent être publiées en `unlisted` pour contrôle avant passage en public.
+
+## Manual-only platforms
+
+Pour l'instant :
+
+- TikTok : génération des scripts/descriptions/assets uniquement ; publication manuelle.
+- Facebook : génération du post et des assets uniquement ; publication manuelle.
+- Instagram : exclu du pipeline.
 

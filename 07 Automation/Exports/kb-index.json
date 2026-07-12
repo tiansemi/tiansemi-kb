@@ -1362,7 +1362,7 @@
       "vendor": null,
       "category": null,
       "status": "draft",
-      "publication_status": "not-published",
+      "publication_status": "manual-only",
       "tags": []
     },
     {
@@ -1372,8 +1372,8 @@
       "domain": null,
       "vendor": null,
       "category": null,
-      "status": "draft",
-      "publication_status": "not-published",
+      "status": "disabled",
+      "publication_status": "excluded",
       "tags": []
     },
     {
@@ -1406,7 +1406,7 @@
       "vendor": null,
       "category": null,
       "status": "draft",
-      "publication_status": "blocked-linkedin-credentials",
+      "publication_status": "youtube-ready-linkedin-debt-facebook-tiktok-manual",
       "tags": [
         "social-media",
         "huawei",
@@ -1421,7 +1421,7 @@
       "vendor": null,
       "category": null,
       "status": "draft",
-      "publication_status": "not-published",
+      "publication_status": "manual-only",
       "tags": []
     },
     {
@@ -1443,7 +1443,7 @@
       "vendor": null,
       "category": null,
       "status": "draft",
-      "publication_status": "not-published",
+      "publication_status": "ready-for-upload",
       "tags": []
     },
     {
@@ -1454,7 +1454,7 @@
       "vendor": null,
       "category": null,
       "status": "draft",
-      "publication_status": "not-published",
+      "publication_status": "asset-generation",
       "tags": []
     },
     {

@@ -1,44 +1,47 @@
----
+﻿---
 platform: YouTube
 format: short
 status: draft
 source_url: "https://tiansemi.github.io/apprentissage/reseaux/hcia-datacom-comprendre-reseaux-communication-donnees/"
-publication_status: not-published
+publication_status: asset-generation
 ---
 
 # YouTube Short
 
-## Title
+## Titre
 
-HCIA-Datacom : la base avant les commandes Huawei
+HCIA-Datacom : le chemin de la donnée en 60 secondes
 
 ## Script
 
-Tu prépares HCIA-Datacom ?
+Tu prépares Huawei HCIA-Datacom ?
 
-La première chose à comprendre, ce n'est pas OSPF, VLAN ou NAT.
+Avant de configurer un switch ou un routeur, comprends une chose : une communication réseau suit toujours un chemin.
 
-C'est le chemin de la donnée.
+Il y a une source, un canal, une destination, puis des équipements intermédiaires.
 
-Source → Canal → Destination.
-
-Après ça, tu ajoutes les rôles :
-
-Le PC envoie.
-Le switch connecte le LAN.
+Le switch connecte les machines du LAN.
 Le routeur relie les réseaux.
-Le firewall filtre.
-L'AP fournit le Wi-Fi.
-Le WAC contrôle les AP.
+Le firewall contrôle ce qui passe.
+L'AP donne l'accès Wi-Fi.
 Le serveur fournit le service.
 
-Et quand une panne arrive, tu suis l'ordre :
-terminal, câble ou Wi-Fi, switch, VLAN, IP, routage, firewall, application.
+Quand une panne arrive, ne tape pas des commandes au hasard.
+Demande-toi d'abord : où se trouve la coupure dans le chemin ?
 
 C'est comme ça qu'on commence à penser comme un ingénieur Datacom.
 
-Article complet sur TianSemi : https://tiansemi.github.io/apprentissage/reseaux/hcia-datacom-comprendre-reseaux-communication-donnees/
+## Texte à l'écran
+
+- Source
+- Canal
+- Destination
+- Switch
+- Routeur
+- Firewall
+- Serveur
+- Où est la panne ?
 
 ## Hashtags
 
-#Huawei #HCIADatacom #Networking #Réseaux
+#Huawei #HCIADatacom #Networking #TianSemi

@@ -1,45 +1,49 @@
----
+﻿---
 platform: TikTok
 format: short-video
 status: draft
 source_url: "https://tiansemi.github.io/apprentissage/reseaux/hcia-datacom-comprendre-reseaux-communication-donnees/"
-publication_status: not-published
+publication_status: manual-only
 ---
 
 # TikTok / Short Script
 
-## Durée cible
+## Hook
 
-45 à 60 secondes.
+Tu prépares HCIA-Datacom ? Ne commence pas par les commandes.
 
-## Hook 0-3s
+## Script
 
-Tu prépares HCIA-Datacom ? Ne commence pas par OSPF. Commence par ça.
+La première chose à comprendre, c'est le chemin de la donnée.
 
-## Scène 1 — 3-12s
+Une communication réseau, c'est toujours : une source, un canal et une destination.
 
-Affiche : Source → Canal → Destination.
+Ensuite, on place les équipements :
 
-Voix :
-Un réseau de communication de données, c'est d'abord une source qui envoie une donnée, un canal qui la transporte, et une destination qui la reçoit.
+- le switch connecte les machines du LAN ;
+- le routeur relie les réseaux ;
+- le firewall contrôle les flux ;
+- l'AP donne l'accès Wi-Fi ;
+- le serveur fournit le service.
 
-## Scène 2 — 12-28s
+Quand une panne arrive, ne tape pas des commandes au hasard.
 
-Affiche une topologie : PC → Switch → Routeur → Firewall → Internet.
+Demande-toi : où est la coupure dans le chemin ?
 
-Voix :
-Ensuite tu identifies les rôles : le switch connecte le LAN, le routeur relie les réseaux, le firewall filtre, l'AP donne le Wi-Fi, le WAC contrôle les AP, et le serveur fournit le service.
+C'est comme ça qu'on commence à penser comme un ingénieur Datacom.
 
-## Scène 3 — 28-45s
+## Texte à afficher
 
-Affiche checklist dépannage.
+Source → Canal → Destination
+Switch = LAN
+Routeur = interconnexion
+Firewall = contrôle
+Où est la panne ?
 
-Voix :
-Quand ça ne marche pas, ne tape pas des commandes au hasard. Vérifie terminal, câble ou Wi-Fi, switch, VLAN, IP, routage, firewall, puis application.
+## Description TikTok
 
-## CTA 45-60s
+La base HCIA-Datacom : comprendre le chemin de la donnée avant de configurer. Article complet sur TianSemi.
 
-Voix :
-J'ai mis l'article complet et le mini-lab sur TianSemi. Lien dans la bio ou sur tiansemi.github.io.
+## Hashtags
 
-Texte écran : HCIA-Datacom #1 — Réseaux de communication de données.
+#Huawei #HCIADatacom #Networking #Réseaux #TianSemi
