@@ -114,8 +114,4 @@ site_url:
 | Canal         | Statut    | Lien |
 | ------------- | --------- | ---- |
 | Site TianSemi | À générer |      |
-| Blog          | À générer |      |
-| LinkedIn      | À générer |      |
-| TikTok        | À générer |      |
-| YouTube       | À générer |      |
 | Quiz          | À générer |      |

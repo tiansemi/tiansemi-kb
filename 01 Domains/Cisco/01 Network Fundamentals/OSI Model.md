@@ -24,11 +24,6 @@ references: []
 assets: []
 labs: []
 blog:
-linkedin:
-facebook:
-instagram:
-youtube:
-tiktok:
 site_url:
 publication_status: "not-started"
 ---
@@ -458,9 +453,4 @@ Diagnostiquer une panne réseau en suivant les couches OSI, sans partir directem
 | ------------- | ---------- | ---- |
 | Site TianSemi | À générer  |      |
 | Blog          | À générer  |      |
-| LinkedIn      | À générer  |      |
-| Facebook      | À générer  |      |
-| Instagram     | À générer  |      |
-| TikTok        | À générer  |      |
-| YouTube       | À générer  |      |
 | Newsletter    | À générer  |      |

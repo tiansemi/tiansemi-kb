@@ -19,12 +19,11 @@ publication_status: "not-started"
 
 ## Objectif
 
-Préparer les sorties de contenu TianSemi liées à HCIA-Datacom : articles, posts LinkedIn, vidéos courtes, quiz et carrousels.
+Préparer les contenus pédagogiques HCIA-Datacom destinés au site TianSemi.
 
 ## Contenus à produire
 
-- [[HCIA-Datacom Blog Ideas]]
-- [[HCIA-Datacom LinkedIn Posts]]
-- [[HCIA-Datacom Short Video Scripts]]
-- [[HCIA-Datacom Quiz Bank]]
-- [[HCIA-Datacom Carousel Ideas]]
+- articles pour la section `/apprentissage/reseaux/` ;
+- quiz de validation intégrés aux articles ;
+- schémas pédagogiques et visuels WebP optimisés ;
+- fiches pratiques dérivées des notes sources validées.

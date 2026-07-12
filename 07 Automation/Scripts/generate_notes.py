@@ -33,11 +33,6 @@ references: []
 assets: []
 labs: []
 blog:
-linkedin:
-facebook:
-instagram:
-youtube:
-tiktok:
 site_url:
 publication_status: "not-started"
 ---
@@ -139,11 +134,6 @@ publication_status: "not-started"
 | ------------- | ---------- | ---- |
 | Site TianSemi | Non généré |      |
 | Blog          | Non généré |      |
-| LinkedIn      | Non généré |      |
-| Facebook      | Non généré |      |
-| Instagram     | Non généré |      |
-| TikTok        | Non généré |      |
-| YouTube       | Non généré |      |
 | Newsletter    | Non généré |      |
 """
 

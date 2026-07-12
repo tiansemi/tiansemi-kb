@@ -14,7 +14,7 @@ SORT file.name ASC
 ## Notes Cisco CCNA
 
 ```dataview
-TABLE id, difficulty, reviewed, linkedin, blog
+TABLE id, difficulty, reviewed, site_url, publication_status
 FROM "01 Domains/Cisco"
 WHERE ccna = true
 SORT id ASC

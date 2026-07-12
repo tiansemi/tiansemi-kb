@@ -1,28 +1,17 @@
 # Content Dashboard
 
-## Notes sans article de blog
+## Notes sans publication sur le site
 
 ```dataview
-TABLE id, title, domain, vendor, blog
+TABLE id, title, domain, vendor, site_url, publication_status
 FROM "01 Domains"
-WHERE blog = null OR blog = ""
+WHERE site_url = null OR site_url = ""
 SORT file.name ASC
 ```
 
 ---
 
-## Notes sans publication LinkedIn
-
-```dataview
-TABLE id, title, domain, vendor, linkedin
-FROM "01 Domains"
-WHERE linkedin = null OR linkedin = ""
-SORT file.name ASC
-```
-
----
-
-## Contenus Blog
+## Sources d'articles pour le site
 
 ```dataview
 TABLE status, created, updated
