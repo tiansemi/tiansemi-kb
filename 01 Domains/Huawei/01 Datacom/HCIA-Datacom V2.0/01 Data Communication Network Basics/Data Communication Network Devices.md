@@ -1,4 +1,4 @@
-﻿---
+---
 id: HUA-HCIA-DC-002
 title: "Data Communication Network Devices"
 category: "Huawei HCIA-Datacom Topic"
