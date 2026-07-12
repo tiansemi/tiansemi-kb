@@ -1,5 +1,5 @@
 {
-  "count": 116,
+  "count": 113,
   "items": [
     {
       "path": "01 Domains/Cisco/01 Network Fundamentals/ARP.md",
@@ -1447,28 +1447,6 @@
       "tags": []
     },
     {
-      "path": "06 Templates/Content/Instagram Carousel Template.md",
-      "title": "Instagram Carousel Template",
-      "id": null,
-      "domain": null,
-      "vendor": null,
-      "category": null,
-      "status": null,
-      "publication_status": null,
-      "tags": []
-    },
-    {
-      "path": "06 Templates/Content/LinkedIn Post Template.md",
-      "title": "LinkedIn Post Template",
-      "id": null,
-      "domain": null,
-      "vendor": null,
-      "category": null,
-      "status": null,
-      "publication_status": null,
-      "tags": []
-    },
-    {
       "path": "06 Templates/Content/Newsletter Template.md",
       "title": "Newsletter Template",
       "id": null,
@@ -1493,17 +1471,6 @@
     {
       "path": "06 Templates/Content/TianSemi Site Article Template.md",
       "title": "TianSemi Site Article Template",
-      "id": null,
-      "domain": null,
-      "vendor": null,
-      "category": null,
-      "status": null,
-      "publication_status": null,
-      "tags": []
-    },
-    {
-      "path": "06 Templates/Content/Video Script Template.md",
-      "title": "Video Script Template",
       "id": null,
       "domain": null,
       "vendor": null,
