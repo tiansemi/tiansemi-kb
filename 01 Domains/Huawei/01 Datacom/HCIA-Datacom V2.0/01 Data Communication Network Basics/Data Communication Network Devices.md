@@ -513,5 +513,4 @@ Le mini-lab est réussi si l'apprenant peut expliquer la topologie sans réciter
 | Canal | Statut | Lien |
 | ----- | ------ | ---- |
 | Site TianSemi | À générer | |
-| Blog | À générer | |
 | Quiz | À générer | |

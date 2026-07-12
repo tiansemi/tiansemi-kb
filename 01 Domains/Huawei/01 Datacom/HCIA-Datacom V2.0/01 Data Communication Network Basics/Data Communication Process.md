@@ -454,5 +454,4 @@ A: `tracert <destination>`.
 | Canal | Statut | Lien |
 |---|---|---|
 | Site TianSemi | À générer | |
-| Blog | À générer | |
 | Quiz | À générer | |

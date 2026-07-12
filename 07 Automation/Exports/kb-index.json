@@ -1,5 +1,5 @@
 {
-  "count": 120,
+  "count": 116,
   "items": [
     {
       "path": "01 Domains/Cisco/01 Network Fundamentals/ARP.md",
@@ -1622,50 +1622,6 @@
     {
       "path": "Home.md",
       "title": "Home",
-      "id": null,
-      "domain": null,
-      "vendor": null,
-      "category": null,
-      "status": null,
-      "publication_status": null,
-      "tags": []
-    },
-    {
-      "path": "pythonenv/Lib/site-packages/idna-3.18.dist-info/licenses/LICENSE.md",
-      "title": "LICENSE",
-      "id": null,
-      "domain": null,
-      "vendor": null,
-      "category": null,
-      "status": null,
-      "publication_status": null,
-      "tags": []
-    },
-    {
-      "path": "pythonenv/Lib/site-packages/pip/_vendor/idna/LICENSE.md",
-      "title": "LICENSE",
-      "id": null,
-      "domain": null,
-      "vendor": null,
-      "category": null,
-      "status": null,
-      "publication_status": null,
-      "tags": []
-    },
-    {
-      "path": "pythonenv/Lib/site-packages/pip-26.1.2.dist-info/licenses/src/pip/_vendor/idna/LICENSE.md",
-      "title": "LICENSE",
-      "id": null,
-      "domain": null,
-      "vendor": null,
-      "category": null,
-      "status": null,
-      "publication_status": null,
-      "tags": []
-    },
-    {
-      "path": "pythonenv/Lib/site-packages/pyparsing/ai/best_practices.md",
-      "title": "best_practices",
       "id": null,
       "domain": null,
       "vendor": null,

@@ -368,9 +368,5 @@ A: `display interface brief`.
 | Canal         | Statut    | Lien |
 | ------------- | --------- | ---- |
 | Site TianSemi | Généré | 03 Content/Blog/Exported/hcia-datacom-comprendre-reseaux-communication-donnees.md |
-| Blog          | Généré | 03 Content/Blog/Exported/hcia-datacom-comprendre-reseaux-communication-donnees.md |
-| LinkedIn      | À générer |      |
-| TikTok        | À générer |      |
-| YouTube       | À générer |      |
 | Quiz          | À générer |      |
 
