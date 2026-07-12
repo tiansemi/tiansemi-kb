@@ -1,5 +1,5 @@
 {
-  "count": 132,
+  "count": 120,
   "items": [
     {
       "path": "01 Domains/Cisco/01 Network Fundamentals/ARP.md",
@@ -1344,120 +1344,6 @@
       "tags": []
     },
     {
-      "path": "03 Content/Social Media/Home.md",
-      "title": "Home",
-      "id": null,
-      "domain": null,
-      "vendor": null,
-      "category": null,
-      "status": null,
-      "publication_status": null,
-      "tags": []
-    },
-    {
-      "path": "03 Content/Social Media/Huawei/HCIA-Datacom/2026-07-11-data-communication-network/facebook-post.md",
-      "title": "facebook-post",
-      "id": null,
-      "domain": null,
-      "vendor": null,
-      "category": null,
-      "status": "draft",
-      "publication_status": "manual-only",
-      "tags": []
-    },
-    {
-      "path": "03 Content/Social Media/Huawei/HCIA-Datacom/2026-07-11-data-communication-network/instagram-carousel.md",
-      "title": "instagram-carousel",
-      "id": null,
-      "domain": null,
-      "vendor": null,
-      "category": null,
-      "status": "disabled",
-      "publication_status": "excluded",
-      "tags": []
-    },
-    {
-      "path": "03 Content/Social Media/Huawei/HCIA-Datacom/2026-07-11-data-communication-network/linkedin-post.md",
-      "title": "linkedin-post",
-      "id": null,
-      "domain": null,
-      "vendor": null,
-      "category": null,
-      "status": "draft",
-      "publication_status": "blocked-credentials",
-      "tags": []
-    },
-    {
-      "path": "03 Content/Social Media/Huawei/HCIA-Datacom/2026-07-11-data-communication-network/publishing-checklist.md",
-      "title": "Publishing Checklist — HCIA-Datacom : comprendre les réseaux de communication de données",
-      "id": null,
-      "domain": null,
-      "vendor": null,
-      "category": null,
-      "status": "draft",
-      "publication_status": null,
-      "tags": []
-    },
-    {
-      "path": "03 Content/Social Media/Huawei/HCIA-Datacom/2026-07-11-data-communication-network/README.md",
-      "title": "Social Pack — HCIA-Datacom : comprendre les réseaux de communication de données",
-      "id": null,
-      "domain": null,
-      "vendor": null,
-      "category": null,
-      "status": "draft",
-      "publication_status": "youtube-ready-linkedin-debt-facebook-tiktok-manual",
-      "tags": [
-        "social-media",
-        "huawei",
-        "hcia-datacom"
-      ]
-    },
-    {
-      "path": "03 Content/Social Media/Huawei/HCIA-Datacom/2026-07-11-data-communication-network/tiktok-short-script.md",
-      "title": "tiktok-short-script",
-      "id": null,
-      "domain": null,
-      "vendor": null,
-      "category": null,
-      "status": "draft",
-      "publication_status": "manual-only",
-      "tags": []
-    },
-    {
-      "path": "03 Content/Social Media/Huawei/HCIA-Datacom/2026-07-11-data-communication-network/whatsapp-community.md",
-      "title": "whatsapp-community",
-      "id": null,
-      "domain": null,
-      "vendor": null,
-      "category": null,
-      "status": "draft",
-      "publication_status": "not-published",
-      "tags": []
-    },
-    {
-      "path": "03 Content/Social Media/Huawei/HCIA-Datacom/2026-07-11-data-communication-network/youtube-description.md",
-      "title": "youtube-description",
-      "id": null,
-      "domain": null,
-      "vendor": null,
-      "category": null,
-      "status": "draft",
-      "publication_status": "ready-for-upload",
-      "tags": []
-    },
-    {
-      "path": "03 Content/Social Media/Huawei/HCIA-Datacom/2026-07-11-data-communication-network/youtube-short.md",
-      "title": "youtube-short",
-      "id": null,
-      "domain": null,
-      "vendor": null,
-      "category": null,
-      "status": "draft",
-      "publication_status": "asset-generation",
-      "tags": []
-    },
-    {
       "path": "04 Assets/Diagrams/Huawei/HCIA-Datacom V2.0/README.md",
       "title": "README",
       "id": null,
@@ -1667,28 +1553,6 @@
     {
       "path": "07 Automation/Prompts/Prompt Library.md",
       "title": "Prompt Library",
-      "id": null,
-      "domain": null,
-      "vendor": null,
-      "category": null,
-      "status": null,
-      "publication_status": null,
-      "tags": []
-    },
-    {
-      "path": "07 Automation/Prompts/Social Publishing Credentials Guide.md",
-      "title": "Social Publishing Credentials Guide",
-      "id": null,
-      "domain": null,
-      "vendor": null,
-      "category": null,
-      "status": null,
-      "publication_status": null,
-      "tags": []
-    },
-    {
-      "path": "07 Automation/Scripts/social_publishers/README.md",
-      "title": "README",
       "id": null,
       "domain": null,
       "vendor": null,

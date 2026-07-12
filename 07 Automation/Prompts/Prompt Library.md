@@ -88,37 +88,9 @@ Contraintes :
 
 ---
 
-## 5. Générateur LinkedIn
-
-À partir de la note TSOS ci-dessous, génère un post LinkedIn.
-
-Contraintes :
-
-* Hook fort.
-* 120 à 220 mots.
-* Ton expert mais accessible.
-* Une seule idée principale.
-* Finir par une question ou CTA.
-* Maximum 3 hashtags.
-
 ---
 
-## 6. Générateur TikTok / Short
-
-À partir de la note TSOS ci-dessous, génère un script vidéo court.
-
-Contraintes :
-
-* 45 à 60 secondes.
-* Hook 3 secondes.
-* Explication avec analogie.
-* Découpage scène par scène.
-* Texte à afficher à l'écran.
-* Suggestion de visuel.
-
----
-
-## 7. Générateur quiz
+## 5. Générateur quiz
 
 À partir de la note TSOS ci-dessous, génère :
 
@@ -129,7 +101,7 @@ Contraintes :
 
 ---
 
-## 8. Générateur flashcards
+## 6. Générateur flashcards
 
 À partir de la note TSOS ci-dessous, génère 15 flashcards.
 
@@ -139,7 +111,7 @@ A:
 
 ---
 
-## 9. Générateur lab
+## 7. Générateur lab
 
 À partir de la note TSOS ci-dessous, propose un lab Packet Tracer/eNSP/EVE-NG.
 
@@ -155,7 +127,7 @@ Inclure :
 
 ---
 
-## 10. Générateur article TianSemi Site
+## 8. Générateur article TianSemi Site
 
 À partir de la note TSOS ci-dessous, génère un article Markdown prêt à intégrer sur [http://tiansemi.github.io/](http://tiansemi.github.io/).
 

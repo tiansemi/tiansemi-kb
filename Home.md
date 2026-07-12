@@ -12,7 +12,7 @@ Ce coffre Obsidian est le cerveau de TianSemi. Il centralise :
 - les assets ;
 - le moteur de publication ;
 - la préparation Huawei ICT Competition ;
-- la production de contenu pour le site et les réseaux sociaux.
+- la production de contenu pour le site TianSemi.
 
 Site cible : http://tiansemi.github.io/
 
@@ -39,7 +39,6 @@ Site cible : http://tiansemi.github.io/
 ## Production de contenu
 
 - [[03 Content/Blog/Home|Blog Engine]]
-- [[03 Content/Social Media/Home|Social Media Engine]]
 - [[03 Content/Newsletter/Home|Newsletter Engine]]
 - [[07 Automation/Prompts/Prompt Library|Prompt Library]]
 
@@ -67,14 +66,11 @@ Site cible : http://tiansemi.github.io/
 - [[06 Templates/Templater/Technical Topic Template|Technical Topic Template]]
 - [[06 Templates/Templater/Atomic Note Template|Atomic Note Template]]
 - [[06 Templates/Content/Blog Article Template|Blog Article Template]]
-- [[06 Templates/Content/LinkedIn Post Template|LinkedIn Post Template]]
-- [[06 Templates/Content/Video Script Template|Video Script Template]]
 - [[06 Templates/Content/Quiz Template|Quiz Template]]
-- [[06 Templates/Content/Instagram Carousel Template|Instagram Carousel Template]]
 - [[06 Templates/Content/Newsletter Template|Newsletter Template]]
 
 ---
 
 ## Principe TSOS
 
-> Une note validée devient une source unique capable de générer : article, post LinkedIn, script vidéo, quiz, flashcards, lab et fiche PDF.
+> Une note validée devient une source unique capable de générer : article site, quiz, flashcards, lab et fiche PDF.

@@ -33,8 +33,8 @@ Il centralise :
 3. Vérifier la note.
 4. Générer les contenus via la Prompt Library.
 5. Exporter les contenus pour [http://tiansemi.github.io/](http://tiansemi.github.io/).
-6. Publier sur le site, le blog et les réseaux sociaux.
-7. Mettre à jour les métadonnées `blog`, `linkedin`, `youtube`, `site_url`, `publication_status`.
+6. Publier sur le site et le blog.
+7. Mettre à jour les métadonnées `blog`, `site_url`, `publication_status`.
 
 ## Commandes utiles
 
@@ -48,10 +48,4 @@ Générer des notes depuis le blueprint :
 
 ```bash
 python "07 Automation/Scripts/generate_notes.py"
-```
-
-Exporter les articles pour le site :
-
-```bash
-python "07 Automation/Scripts/export_for_site.py"
 ```
