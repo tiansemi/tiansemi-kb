@@ -711,14 +711,17 @@
       "tags": [
         "huawei",
         "hcia",
-        "datacom"
+        "datacom",
+        "encapsulation",
+        "decapsulation",
+        "pdu"
       ]
     },
     {
       "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/Home.md",
       "title": "Data Communication Network Basics",
       "id": "HUAWEI-HCIA-DATACOM-V2-001",
-      "domain": "Networking",
+      "domain": "Datacom",
       "vendor": "Huawei",
       "category": "MOC",
       "status": "draft",
@@ -742,7 +745,11 @@
       "tags": [
         "huawei",
         "hcia",
-        "datacom"
+        "datacom",
+        "vrp",
+        "yunshan-os",
+        "cli",
+        "configuration-management"
       ]
     },
     {
@@ -757,7 +764,9 @@
       "tags": [
         "huawei",
         "hcia",
-        "datacom"
+        "datacom",
+        "network-engineering",
+        "network-engineer"
       ]
     },
     {
@@ -772,7 +781,10 @@
       "tags": [
         "huawei",
         "hcia",
-        "datacom"
+        "datacom",
+        "osi",
+        "tcp-ip",
+        "protocols"
       ]
     },
     {
