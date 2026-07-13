@@ -80,9 +80,6 @@ def build_topic_yaml(row: dict[str, str]) -> str:
             "keywords: []",
             "prerequisites: []",
             "related: []",
-            "commands: []",
-            "labs: []",
-            "assets: []",
             'publication_status: "not-started"',
             "site_url:",
             "---",
@@ -142,12 +139,6 @@ def render_body(row: dict[str, str], template_body: str) -> str:
         body = body.replace(
             "## Source officielle",
             f"## Source officielle\n\n- {row['source']}",
-            1,
-        )
-    if "## Objectifs officiels couverts\n\n-" in body:
-        body = body.replace(
-            "## Objectifs officiels couverts\n\n-",
-            f"## Objectifs officiels couverts\n\n- À compléter depuis {row['source']}, sans reproduction massive.",
             1,
         )
     return body.strip()

@@ -11,7 +11,7 @@ tags:
   - Réseau
   - TianSemi
 description: "Comprendre ce qu'est un réseau de communication de données, les équipements essentiels, les types de réseaux et les bases pratiques du parcours HCIA-Datacom."
-source_note: "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/Data Communication Network.md"
+source_note: "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/01 Data Communication Network Basics/Data Communication Network.md"
 canonical_url: "https://tiansemi.github.io/apprentissage/reseaux/hcia-datacom-comprendre-reseaux-communication-donnees"
 status: "draft"
 publication_status: "generated"
@@ -195,10 +195,13 @@ La topologie aide à comprendre, expliquer et dépanner. Même une notion théor
 
 La suite du parcours TianSemi HCIA-Datacom abordera :
 
-- Network Reference Models ;
-- Data Encapsulation and Decapsulation ;
-- Huawei Network Device Operating Systems ;
+- Applications and Data ;
+- Network Reference Models and Standard Protocols ;
+- Data Communication Process, avec l'encapsulation et la désencapsulation ;
+- Operating System Overview ;
+- Logging In to Network Devices ;
+- Configuring Network Devices ;
 - Basic Operations on Huawei Network Devices ;
 - VLAN Configuration.
 
-Si tu veux progresser sérieusement en Huawei Datacom, rejoins le parcours TianSemi HCIA-Datacom : chaque notion sera accompagnée d'un lab, de commandes, de vérifications et de cas de troubleshooting.
+Si tu veux progresser sérieusement en Huawei Datacom, rejoins le parcours TianSemi HCIA-Datacom : chaque notion suivra fidèlement le support officiel Huawei, avec des commandes, des manipulations et du troubleshooting lorsque le sujet les justifie.

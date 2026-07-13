@@ -1,6 +1,8 @@
 ---
 id:
 title: "<% tp.file.title %>"
+official_title:
+course_unit:
 category: "Huawei HCIA-Datacom Topic"
 domain: "Datacom"
 vendor: "Huawei"
@@ -11,107 +13,41 @@ status: "draft"
 reviewed: false
 created: "<% tp.date.now('YYYY-MM-DD') %>"
 updated: "<% tp.date.now('YYYY-MM-DD') %>"
-source_material:
-  - "HCIA-Datacom V2.0 Training Material.pdf"
-source_lab:
-  - "HCIA-Datacom V2.0 Lab Guide.pdf"
-official_source:
-  - "https://e.huawei.com/en/talent/cert/#/careerCert"
-tags:
-  - huawei
-  - hcia
-  - datacom
-keywords: []
+source: "HCIA-Datacom V2.0 Training Material"
+source_pages:
+tags: [huawei, hcia, datacom]
 prerequisites: []
 related: []
-commands: []
-labs: []
-assets: []
+lab_required: false
 publication_status: "not-started"
 site_url:
 ---
 
 # <% tp.file.title %>
 
-## Résumé
+> Ce template est adaptatif. La structure du support officiel Huawei doit déterminer les sections de la note. Ne pas ajouter automatiquement des commandes, un lab, du troubleshooting, un quiz ou des flashcards.
 
-> Résumé court du sujet.
+## Objectif officiel
 
----
+Traduire fidèlement l'objectif correspondant dans le Training Material.
 
-## Objectifs officiels couverts
+## Contenu officiel
 
--
+Reprendre ici, dans le même ordre, les titres et la progression du support Huawei. Reformuler en français sans ajouter de rubriques artificielles.
 
----
+## Résumé fidèle du cours
 
-## Explication simple
-
----
-
-## Détails techniques
-
----
-
-## À retenir pour l’examen HCIA
-
----
-
-## Commandes Huawei utiles
-
-[Commandes à compléter]
-
-
----
-
-## Pratique obligatoire
-
-### Objectif
-
-### Topologie
-
-### Étapes
-
-### Vérification
-
-### Résultat attendu
-
----
-
-## Troubleshooting
-
-| Symptôme | Cause probable | Vérification | Correction |
-| -------- | -------------- | ------------ | ---------- |
-
----
-
-## Mini-lab TianSemi
-
----
-
-## Questions d’entretien
-
----
-
-## Quiz
-
----
-
-## Flashcards
-
----
+Synthétiser uniquement les points réellement couverts par Huawei.
 
 ## Références
 
-* HCIA-Datacom V2.0 Training Material
-* HCIA-Datacom V2.0 Lab Guide
-* Huawei Talent Certification page
+- Huawei, *HCIA-Datacom V2.0 Training Material*, pages PDF à préciser.
 
----
-
-## Contenus générés
-
-| Canal         | Statut    | Lien |
-| ------------- | --------- | ---- |
-| Site TianSemi | À générer |      |
-| Quiz          | À générer |      |
+<!--
+Sections facultatives, uniquement lorsqu'elles sont utiles et directement justifiées :
+- Pratique officielle associée
+- Commandes et configuration
+- Troubleshooting
+- Révision TianSemi
+- Contenu généré pour le site
+-->

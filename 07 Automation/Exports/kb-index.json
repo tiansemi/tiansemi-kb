@@ -1,5 +1,5 @@
 {
-  "count": 113,
+  "count": 116,
   "items": [
     {
       "path": "01 Domains/Cisco/01 Network Fundamentals/ARP.md",
@@ -652,7 +652,7 @@
       ]
     },
     {
-      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/Data Communication Network Devices.md",
+      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/01 Data Communication Network Basics/Data Communication Network Devices.md",
       "title": "Data Communication Network Devices",
       "id": "HUA-HCIA-DC-002",
       "domain": "Datacom",
@@ -668,7 +668,7 @@
       ]
     },
     {
-      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/Data Communication Network.md",
+      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/01 Data Communication Network Basics/Data Communication Network.md",
       "title": "Data Communication Network",
       "id": "HUA-HCIA-DC-001",
       "domain": "Datacom",
@@ -679,11 +679,12 @@
       "tags": [
         "huawei",
         "hcia",
-        "datacom"
+        "datacom",
+        "network-basics"
       ]
     },
     {
-      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/Data Communication Process.md",
+      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/01 Data Communication Network Basics/Data Communication Process.md",
       "title": "Data Communication Process",
       "id": "HUA-HCIA-DC-003",
       "domain": "Datacom",
@@ -695,14 +696,46 @@
         "huawei",
         "hcia",
         "datacom",
-        "data-communication",
-        "troubleshooting"
+        "communication-process"
       ]
     },
     {
-      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/Data Encapsulation and Decapsulation.md",
-      "title": "Data Encapsulation and Decapsulation",
-      "id": "HUA-HCIA-DC-006",
+      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/01 Data Communication Network Basics/Network Engineering and Network Engineers.md",
+      "title": "Network Engineering and Network Engineers",
+      "id": "HUA-HCIA-DC-004",
+      "domain": "Datacom",
+      "vendor": "Huawei",
+      "category": "Huawei HCIA-Datacom Topic",
+      "status": "draft",
+      "publication_status": "not-started",
+      "tags": [
+        "huawei",
+        "hcia",
+        "datacom",
+        "network-engineering"
+      ]
+    },
+    {
+      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/02 Network Reference Models/Applications and Data.md",
+      "title": "Applications and Data",
+      "id": "HUA-HCIA-DC-005",
+      "domain": "Datacom",
+      "vendor": "Huawei",
+      "category": "Huawei HCIA-Datacom Topic",
+      "status": "draft",
+      "publication_status": "not-started",
+      "tags": [
+        "huawei",
+        "hcia",
+        "datacom",
+        "applications",
+        "data"
+      ]
+    },
+    {
+      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/02 Network Reference Models/Data Communication Process.md",
+      "title": "Data Communication Process",
+      "id": "HUA-HCIA-DC-007",
       "domain": "Datacom",
       "vendor": "Huawei",
       "category": "Huawei HCIA-Datacom Topic",
@@ -713,8 +746,79 @@
         "hcia",
         "datacom",
         "encapsulation",
-        "decapsulation",
-        "pdu"
+        "decapsulation"
+      ]
+    },
+    {
+      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/02 Network Reference Models/Network Reference Models and Standard Protocols.md",
+      "title": "Network Reference Models and Standard Protocols",
+      "id": "HUA-HCIA-DC-006",
+      "domain": "Datacom",
+      "vendor": "Huawei",
+      "category": "Huawei HCIA-Datacom Topic",
+      "status": "draft",
+      "publication_status": "not-started",
+      "tags": [
+        "huawei",
+        "hcia",
+        "datacom",
+        "osi",
+        "tcp-ip",
+        "protocols"
+      ]
+    },
+    {
+      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/03 Network Device Operating Systems/Configuring Network Devices.md",
+      "title": "Configuring Network Devices",
+      "id": "HUA-HCIA-DC-010",
+      "domain": "Datacom",
+      "vendor": "Huawei",
+      "category": "Huawei HCIA-Datacom Topic",
+      "status": "draft",
+      "publication_status": "not-started",
+      "tags": [
+        "huawei",
+        "hcia",
+        "datacom",
+        "cli",
+        "file-system",
+        "configuration-files"
+      ]
+    },
+    {
+      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/03 Network Device Operating Systems/Logging In to Network Devices.md",
+      "title": "Logging In to Network Devices",
+      "id": "HUA-HCIA-DC-009",
+      "domain": "Datacom",
+      "vendor": "Huawei",
+      "category": "Huawei HCIA-Datacom Topic",
+      "status": "draft",
+      "publication_status": "not-started",
+      "tags": [
+        "huawei",
+        "hcia",
+        "datacom",
+        "console",
+        "telnet",
+        "stelnet",
+        "web-ui"
+      ]
+    },
+    {
+      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/03 Network Device Operating Systems/Operating System Overview.md",
+      "title": "Operating System Overview",
+      "id": "HUA-HCIA-DC-008",
+      "domain": "Datacom",
+      "vendor": "Huawei",
+      "category": "Huawei HCIA-Datacom Topic",
+      "status": "draft",
+      "publication_status": "not-started",
+      "tags": [
+        "huawei",
+        "hcia",
+        "datacom",
+        "yunshan-os",
+        "vrp"
       ]
     },
     {
@@ -731,60 +835,6 @@
         "datacom",
         "hcia",
         "fundamentals"
-      ]
-    },
-    {
-      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/Huawei Network Device Operating Systems.md",
-      "title": "Huawei Network Device Operating Systems",
-      "id": "HUA-HCIA-DC-007",
-      "domain": "Datacom",
-      "vendor": "Huawei",
-      "category": "Huawei HCIA-Datacom Topic",
-      "status": "draft",
-      "publication_status": "not-started",
-      "tags": [
-        "huawei",
-        "hcia",
-        "datacom",
-        "vrp",
-        "yunshan-os",
-        "cli",
-        "configuration-management"
-      ]
-    },
-    {
-      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/Network Engineering and Network Engineers.md",
-      "title": "Network Engineering and Network Engineers",
-      "id": "HUA-HCIA-DC-004",
-      "domain": "Datacom",
-      "vendor": "Huawei",
-      "category": "Huawei HCIA-Datacom Topic",
-      "status": "draft",
-      "publication_status": "not-started",
-      "tags": [
-        "huawei",
-        "hcia",
-        "datacom",
-        "network-engineering",
-        "network-engineer"
-      ]
-    },
-    {
-      "path": "01 Domains/Huawei/01 Datacom/HCIA-Datacom V2.0/01 Data Communication Network Basics/Network Reference Models.md",
-      "title": "Network Reference Models",
-      "id": "HUA-HCIA-DC-005",
-      "domain": "Datacom",
-      "vendor": "Huawei",
-      "category": "Huawei HCIA-Datacom Topic",
-      "status": "draft",
-      "publication_status": "not-started",
-      "tags": [
-        "huawei",
-        "hcia",
-        "datacom",
-        "osi",
-        "tcp-ip",
-        "protocols"
       ]
     },
     {
